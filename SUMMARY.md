@@ -21,12 +21,13 @@
 
 ## 第二部分：工具篇
 
-* [第三章：Tool Use 工具调用](03_tools/README.md)
-  * [3.1 Tool Use 概述与工作原理](03_tools/3.1_overview.md)
+* [第三章：工具](03_tools/README.md)
+  * [3.1 工具概述与工作原理](03_tools/3.1_overview.md)
   * [3.2 定义工具 Schema](03_tools/3.2_schema.md)
   * [3.3 处理工具调用结果](03_tools/3.3_results.md)
   * [3.4 多工具编排与复杂流程](03_tools/3.4_orchestration.md)
   * [3.5 高级特性：程序化工具调用](03_tools/3.5_programmatic.md)
+  * [3.6 管理大型工具库：工具搜索](03_tools/3.6_tool_search.md)
 
 * [第四章：MCP 模型上下文协议](04_mcp/README.md)
   * [4.1 MCP 是什么：AI 的 USB-C](04_mcp/4.1_intro.md)
@@ -41,6 +42,7 @@
   * [5.3 环境配置与安全沙箱](05_computer_use/5.3_env.md)
   * [5.4 实战：构建桌面自动化 Agent](05_computer_use/5.4_practical.md)
   * [5.5 局限性与最佳实践](05_computer_use/5.5_best_practices.md)
+
 ## 第三部分：进阶篇
 
 * [第六章：Skills 技能系统](06_skills/README.md)
