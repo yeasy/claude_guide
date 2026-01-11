@@ -88,7 +88,7 @@
 
 ## 附录
 
-* [附录 A：Claude API 快速参考](12_appendix/12_api_ref.md)
-* [附录 B：常见问题解答](12_appendix/12_faq.md)
-* [附录 C：术语表](12_appendix/12_glossary.md)
-* [附录 D：延伸阅读与资源](12_appendix/12_resources.md)
+* [附录 A：Claude API 快速参考](12_appendix/12.1_api_ref.md)
+* [附录 B：常见问题解答](12_appendix/12.2_faq.md)
+* [附录 C：术语表](12_appendix/12.3_glossary.md)
+* [附录 D：延伸阅读与资源](12_appendix/12.4_resources.md)

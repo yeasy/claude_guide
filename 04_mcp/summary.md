@@ -4,12 +4,12 @@ MCP (Model Context Protocol) 标志着 AI 应用开发进入了一个标准化�
 
 ### 核心知识点回顾
 
-#### 1. 协议的价值
+#### 协议的价值
 *   **标准化 (Standardization)**：Client 和 Server 之间通过通用的 JSON-RPC 2.0 协议对话。
 *   **解耦 (Decoupling)**：AI 开发者不需要关心底层数据源的实现，工具开发者不需要适配所有 AI 模型。
 *   **USB-C 类比**：让连接数据变得像插外设一样简单。
 
-#### 2. 架构三支柱 (The Three Pillars)
+#### 架构三支柱 (The Three Pillars)
 *   **Resources (资源)**：被动的数据源，供模型“阅读” (Read Context)。
     *   *例：文件内容、数据库表 Schema、日志流。*
 *   **Tools (工具)**：主动的操作，供模型“执行” (Take Action)。
@@ -17,11 +17,11 @@ MCP (Model Context Protocol) 标志着 AI 应用开发进入了一个标准化�
 *   **Prompts (提示)**：预设的模版，供模型“调用” (Access Expertise)。
     *   *例：服务器自带的分析专家模版。*
 
-#### 3. 实战配置
+#### 实战配置
 *   **配置文件**：`claude_desktop_config.json` 是核心枢纽。
 *   **多源融合**：我们可以同时挂载 GitHub, SQLite, Filesystem 等多个 Server，通过组合它们的能力，让 Claude 瞬间变身为全栈工程师或数据分析师。
 
-#### 4. 自定义开发
+#### 自定义开发
 *   **FastMCP (Python)**：基于装饰器的极速开发体验，适合快速验证。
 *   **TypeScript SDK**：类型安全，适合构建复杂的生产级 Server。
 *   **设计原则**：工具原子化、描述清晰化、错误处理优雅化。

@@ -6,7 +6,7 @@
 
 ## 这本书是关于什么的？
 
-本书是一本面向初学者和进阶用户的 Claude 完整学习指南。我们将系统性地介绍 Claude 的核心能力体系，包括：
+Claude 是目前业界最先进的生产环境大预言模型之一。本书是一本面向初学者和进阶用户的 Claude 完整学习指南。我们将系统性地介绍 Claude 的核心能力体系，包括：
 
 - **[提示工程（Prompt Engineering）](02_prompt/README.md)**：与 Claude 高效沟通的艺术
 - **[工具使用（Tool Use）](03_tools/README.md)**：让 Claude 调用外部 API 和服务
