@@ -5,21 +5,21 @@
 
 ### 核心知识点回顾
 
-#### 客户服务 (CS)
+#### 客户服务
 *   不要做那个只知道推卸责任的机器人。
 *   利用 **RAG** 赋予它知识，利用 **Tools** 赋予它权力，利用 **Persona** 赋予它温度。
 *   记住：**Human Handoff** 不是失败，而是负责任的体现。
 
-#### 文档处理 (IDP)
+#### 文档处理
 *   **Claude Vision** 让 OCR 变成了 "OCR + Understanding"。
 *   从合同比对到发票录入，AI 正在重构 Back-office 的工作流。
 *   关键点在于 **Structured Output** (JSON)，这是连接 AI 与 ERP 的桥梁。
 
-#### 数据分析 (BI)
+#### 数据分析
 *   **Code Interpreter** 模式比单纯的 LLM 推理更可靠。让 AI 写代码去算数，而不是自己心算。
 *   **Text-to-SQL** 打开了数仓的大门，但必须做好权限隔离和语句审查。
 
-#### 质量保证 (QA)
+#### 质量保证
 *   不仅是写单测。
 *   **Visual Regression Testing** 利用 AI 的眼睛去发现 UI 错位，这是传统工具做不到的。
 *   **Log Analysis** 利用 AI 的大脑去从海量日志中定位根因。

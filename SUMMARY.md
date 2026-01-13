@@ -63,7 +63,7 @@
   * [8.1 什么是 AI Agent](08_agent/8.1_intro.md)
   * [8.2 Agent 设计模式](08_agent/8.2_patterns.md)
   * [8.3 上下文管理与记忆](08_agent/8.3_memory.md)
-  * [8.4 Extended Thinking 扩展思考](08_agent/8.4_extended_thinking.md)
+  * [8.4 扩展思考](08_agent/8.4_extended_thinking.md)
   * [8.5 多 Agent 协作](08_agent/8.5_collaboration.md)
 
 ## 第四部分：实战篇
@@ -76,15 +76,17 @@
 
 * [第十章：成本优化与性能调优](10_optimization/README.md)
   * [10.1 Token 计费原理](10_optimization/10.1_pricing.md)
-  * [10.2 Prompt Caching 提示缓存](10_optimization/10.2_caching.md)
+  * [10.2 提示缓存](10_optimization/10.2_caching.md)
   * [10.3 上下文窗口管理](10_optimization/10.3_context_mgmt.md)
   * [10.4 模型选择与成本权衡](10_optimization/10.4_selection.md)
 
 * [第十一章：安全与伦理](11_safety/README.md)
   * [11.1 宪法式 AI](11_safety/11.1_cai.md)
-  * [11.2 安全使用指南](11_safety/11.2_guide.md)
+  * [11.2 安全使用指南](11_safety/11.2_guardrail.md)
   * [11.3 数据隐私与合规](11_safety/11.3_privacy.md)
   * [11.4 负责任的 AI 应用](11_safety/11.4_responsible.md)
+
+* [结语：从工具到伙伴](EPILOGUE.md)
 
 ## 附录
 
