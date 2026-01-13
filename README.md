@@ -98,6 +98,6 @@ Claude 是目前业界最先进的生产环境大预言模型之一。本书是�
 
 ## 开始阅读
 
-点击 [目录](SUMMARY.md)，或从 [第一章：认识 Claude](01_intro/README.md) 开始你的学习之旅。
+点击 [目录](SUMMARY.md)，或从 [第一章：认识 Claude](01_intro/README.md) 开始你的学习之旅。[使用 Gitbook 阅读](https://yeasy.gitbook.io/claude_guide/)。
 
 > 💡 **提示**：建议边阅读边实践。每章都提供可运行的代码示例，确保你拥有 [Claude](https://claude.ai) 访问权限以获得最佳学习体验。
