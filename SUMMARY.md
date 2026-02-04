@@ -51,6 +51,7 @@
   * [6.3 使用内置 Skills](06_skills/6.3_builtin.md)
   * [6.4 创建自定义 Skills](06_skills/6.4_custom.md)
   * [6.5 Skills 组合与高级用法](06_skills/6.5_combination.md)
+  * [6.6 调试与优化 Skills](06_skills/6.6_debugging.md)
 
 * [第七章：Agentic Coding 与 Claude Code](07_coding/README.md)
   * [7.1 Claude 作为编程助手](07_coding/7.1_assistant.md)
@@ -85,6 +86,8 @@
   * [11.2 安全使用指南](11_safety/11.2_guardrail.md)
   * [11.3 数据隐私与合规](11_safety/11.3_privacy.md)
   * [11.4 负责任的 AI 应用](11_safety/11.4_responsible.md)
+  * [11.5 对抗性攻击与防御](11_safety/11.5_adversarial.md)
+  * [11.6 企业级合规与审计](11_safety/11.6_compliance.md)
 
 * [结语：从工具到伙伴](EPILOGUE.md)
 
@@ -94,3 +97,4 @@
 * [附录 B：常见问题解答](12_appendix/12.2_faq.md)
 * [附录 C：术语表](12_appendix/12.3_glossary.md)
 * [附录 D：延伸阅读与资源](12_appendix/12.4_resources.md)
+* [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)

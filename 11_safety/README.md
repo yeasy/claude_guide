@@ -21,3 +21,5 @@
 | [11.2](11.2_guardrail.md)       | 安全使用指南     |
 | [11.3](11.3_privacy.md)     | 数据隐私与合规    |
 | [11.4](11.4_responsible.md) | 负责任的 AI 应用 |
+| [11.5](11.5_adversarial.md) | 对抗性攻击与防御 |
+| [11.6](11.6_compliance.md)  | 企业级合规与审计 |

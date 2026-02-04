@@ -8,7 +8,9 @@
 
 > **从零开始，系统掌握 Anthropic Claude 的核心能力与最佳实践**
 > 
-> **当前版本**: v1.1.0
+> **当前版本**: v1.2.0 (持续跟随 Claude 模型迭代)
+> 
+> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/3.5/4/4.5 等各版本中均适用。针对特定模型的差异（如 Compute Use），会特别标注。*
 
 ![Claude Guide in Gitbook](_images/gitbook.png)
 

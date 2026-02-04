@@ -28,6 +28,7 @@ Skills 是包含指令、脚本和资源的文件夹，Claude 可以自动发现
 | [6.3](6.3_builtin.md) | 使用内置 Skills |
 | [6.4](6.4_custom.md) | 创建自定义 Skills |
 | [6.5](6.5_combination.md) | Skills 组合与高级用法 |
+| [6.6](6.6_debugging.md) | 调试与优化 Skills |
 
 ---
 
