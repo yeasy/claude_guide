@@ -9,11 +9,11 @@
 *   **客户端工具**：你掌握控制权，Claude 负责意图识别和参数生成。
 *   **服务端工具**：Anthropic 提供的开箱即用能力（如联网搜索）。
 
-#### 定义的力量 (Schema)
+#### 定义的力量
 *   **Description is Prompt**：工具描述是系统提示词的一部分，决定了调用的准确率。
 *   **JSON Schema**：精确的参数类型定义（Enum, Required, Format）是防止幻觉的第一道防线。
 
-#### 请-算-行-馈 (The ReAct Loop)
+#### 请-算-行-馈
 我们深入剖析了 Agent 运行的生命周期：
 1.  **Stop Reason**: 识别 `tool_use` 信号。
 2.  **Execution**: 并行或串行执行业务逻辑。
