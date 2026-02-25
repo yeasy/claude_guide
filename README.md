@@ -8,9 +8,7 @@
 
 > **从零开始，系统掌握 Anthropic Claude 的核心能力与最佳实践**
 > 
-> **当前版本**: v1.2.0 (持续跟随 Claude 模型迭代)
-> 
-> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/3.5/4/4.5 等各版本中均适用。针对特定模型的差异（如 Compute Use），会特别标注。*
+> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/4/4.5/4.6 等各版本中均适用。针对特定模型的差异（如 Computer Use），会特别标注。*
 
 ![Claude Guide in Gitbook](_images/gitbook.png)
 
@@ -29,7 +27,7 @@
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-本书基于最新的 **Claude 3.5 / 4.5 Sonnet**、**Claude 4.5 Opus** 及 **Claude 3.5 Haiku** 模型，提供经过验证的最佳实践。
+本书基于最新的 **Claude 4.6 Sonnet**、**Claude 4.6 Opus** 及 **Claude 4.5 Haiku** 模型，提供经过验证的最佳实践。
 
 ---
 
