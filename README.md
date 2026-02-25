@@ -135,7 +135,22 @@ npx honkit serve
 
 ## 📜 协议 | License
 
-本书内容遵循 [Create Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+本书内容遵循 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+
+---
+
+## 📚 推荐阅读 | Related Books
+
+如果你对 Claude 以外的 AI 技术也感兴趣，以下丛书为你提供完整的学习路径：
+
+| 书名 | 说明 |
+|------|------|
+| [《零基础学 AI》](https://github.com/yeasy/ai_beginner_guide) | AI 零基础入门，适合作为本书的前置阅读 |
+| [《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) | 深入提示词工程的通用原理与最佳实践 |
+| [《大模型上下文工程权威指南》](https://github.com/yeasy/context_engineering_guide) | 系统掌握上下文工程，从提示词到生产级 AI 系统 |
+| [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 全面掌握智能体架构、多智能体协作与 AgentOps |
+| [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | LLM 安全攻防与治理 |
+| [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源自驱型智能体框架的使用与原理 |
 
 ---
 
