@@ -1,4 +1,4 @@
-# 第七章：Agentic Coding 与 Claude Code
+# 第七章 Agentic Coding 与 Claude Code
 
 Claude 已成为开发者的强力编程助手。本章介绍如何充分利用 Claude 的编程能力。
 

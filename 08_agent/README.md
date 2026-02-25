@@ -1,4 +1,4 @@
-# 第八章：Agent 架构设计
+# 第八章 Agent 架构设计
 
 AI Agent 是能够自主完成复杂任务的系统。本章介绍如何基于 Claude 构建 Agent。
 

@@ -1,4 +1,4 @@
-# 第五章：Computer Use 计算机操控
+# 第五章 Computer Use 计算机操控
 
 Computer Use 是 Claude 最具突破性的能力，让 AI 能够像人类一样操作计算机界面。
 

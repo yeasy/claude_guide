@@ -22,5 +22,5 @@ yarn-error.log*
 *.tmp
 *.log
 
-.agents
+.agent
 combine.py

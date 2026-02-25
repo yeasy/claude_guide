@@ -1,4 +1,4 @@
-# 第二章：提示工程核心技术
+# 第二章 提示工程核心技术
 
 [提示工程（Prompt Engineering）](https://github.com/yeasy/prompt_engineering_guide) 是与 Claude 高效沟通的艺术与科学。一个好的提示词，能让 Claude 的输出质量提升数倍。
 

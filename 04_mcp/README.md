@@ -1,4 +1,4 @@
-# 第四章：MCP 模型上下文协议
+# 第四章 MCP 模型上下文协议
 
 MCP（Model Context Protocol）是 Anthropic 推出的开放标准，让 Claude 能够安全地连接各种外部数据源和服务。
 
