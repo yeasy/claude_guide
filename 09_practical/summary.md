@@ -37,6 +37,6 @@
 OpenAI o1 很强，Claude 3.5 Opus 很强，但它们都很贵。如果你的应用每天有 100 万次调用，每一分钱的 Token 成本都至关重要。
 如何让 AI 跑得又快又省钱？如何通过微调小模型来达到大模型的效果？
 
-接下来将进入第十章，学习 **Optimization & Tuning**。
+接下来将进入[第十章](../10_optimization/README.md)，学习 **Optimization & Tuning**。
 
 ➡️ [成本优化与性能调优](../10_optimization/README.md)

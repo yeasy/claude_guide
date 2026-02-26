@@ -37,6 +37,6 @@
 在所有的 Skill 中，最重要的莫过于 **Coding Skill**。因为代码即法律（Code is Law），代码即世界。
 如何让 Claude 写出高质量、无 Bug、可维护的代码？如何让它甚至能自己修 Bug？
 
-让我们进入第七章，探索 Claude 最被程序员称道的能力——**Agentic Coding**。
+让我们进入[第七章](../07_coding/README.md)，探索 Claude 最被程序员称道的能力——**Agentic Coding**。
 
 ➡️ [Agentic Coding 智能编程](../07_coding/README.md)
