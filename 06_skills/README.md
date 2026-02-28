@@ -6,7 +6,7 @@ Skills 是 Claude 2025 年推出的新能力，让你可以创建可复用的定
 
 ## 什么是 Skills？
 
-Skills 是包含指令、脚本和资源的文件夹，Claude 可以自动发现并应用它们。可以把 Skills 想象成为 Claude 定制的"技能包"。
+Skills 是包含指令、脚本和资源的文件夹，Claude 可以自动发现并应用它们。可以把 Skills 想象成为 Claude 定制的“技能包”。
 
 ---
 

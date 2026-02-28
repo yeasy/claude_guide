@@ -1,7 +1,7 @@
 {
     "title": "Claude 技术指南",
     "description": "Claude 技术指南 - 从理论到实践，掌握 Claude 的核心能力与最佳实践",
-    "author": "yeasy@GitHub",
+    "author": "yeasy",
     "language": "zh-hans",
     "plugins": [
         "mermaid-gb3",

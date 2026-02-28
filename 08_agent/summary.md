@@ -1,21 +1,24 @@
 ## 本章小结：构建智能体系统的艺术
 
-从这章开始，讨论的焦点不再是"如何向 Chatbot 提问"，而是"如何构建一个能自主干活的数字员工"。这就是 Agent Engineering (智能体工程)。
+从这章开始，讨论的焦点不再是“如何向 Chatbot 提问”，而是“如何构建一个能自主干活的数字员工”。这就是 Agent Engineering (智能体工程)。
 
 ### 核心知识点回顾
 
 #### Agent 的解剖学
+
 *   **Brain (LLM)**: 核心决策中枢。Claude 4.5 Sonnet 是目前的版本答案。
 *   **Planning (ReAct/Plan-Solve)**: 决定是“走一步看一步”还是“谋定而后动”。
 *   **Memory (RAG/VectorDB)**: 突破 200k Token 限制，让 Agent 拥有长期记忆。
 *   **Action (MCP)**: 连接现实世界的四肢。
 
 #### 思考的进化
+
 *   **System 1 (LLM)**: 快速直觉反应。
 *   **System 2 (Running Code/Extended Thinking)**: 慢速逻辑验证。
 *   未来的 Agent 一定是混合这两种系统：用 System 1 快速提案，用 System 2 严格审查。
 
 #### 集体智慧
+
 *   **Multi-Agent Systems**: 术业有专攻。与其用一个超级 Prompt 做所有事，不如用三个简单的 Prompt 分别做一个 Researcher, Coder, Reviewer。
 *   **Orchestration**: 无论是层级式（Leader-Follower）还是接力棒式（Handoff），关键在于清晰的**状态共享**和**边界定义**。
 

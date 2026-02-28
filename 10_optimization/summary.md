@@ -7,22 +7,26 @@
 ### 核心知识点回顾
 
 #### Token 经济学
+
 *   Token 是计费单位，也是算力单位。
 *   Haiku, Sonnet, Opus 构成了明确的价格阶梯。
 *   永远先算 ROI，再决定用哪个模型。不要用牛刀杀鸡。
 
 #### Prompt Caching (缓存)
+
 *   这是长文本应用（Long Context App）的救星。
 *   通过识别重复前缀（Prefix），它可以让 API 成本直降 90%，延迟直降 80%。
 *   **最佳实践**: 总是把 System Prompt 和大段背景资料放在最前面。
 
 #### Context Management (上下文)
+
 *   200k 很大，但也很贵。
 *   **Sliding Window**: 最简单，丢弃旧对话。
 *   **Summarization**: 最智能，总结旧对话。
 *   **Distillation**: 最极客，只提取状态。
 
 #### Routing & Cascading (路由与级联)
+
 *   **Router**: 一个聪明的看门人，把简单任务扔给 Haiku，复杂任务交给 Opus。
 *   **Cascading**: 让 Haiku 先试，只有在它搞砸（Unit Test Fail）的时候，才请 Sonnet 出山救火。
 

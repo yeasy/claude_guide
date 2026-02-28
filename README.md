@@ -77,18 +77,21 @@ npx honkit serve
 ## 📚 内容大纲 | Contents
 
 ### 🎯 基础能力
+
 - [ ] 理解 Claude 的能力矩阵与模型选择策略
 - [ ] 编写高质量的系统提示词（System Prompt）
 - [ ] 使用 XML 标签结构化复杂指令
 - [ ] 应用少样本学习（Few-shot Learning）和思维链（Chain of Thought）
 
 ### 🔧 中级技能
+
 - [ ] 定义并调用自定义工具（Tool Use）
 - [ ] 实现多轮对话与上下文管理
 - [ ] 使用 Files API 处理文档
 - [ ] 配置 MCP 服务器连接外部数据源
 
 ### 🚀 高级应用
+
 - [ ] 构建具备 Computer Use 能力的 AI Agent
 - [ ] 设计可复用的 Skills 工作流
 - [ ] 使用 Claude Code SDK 实现 Agentic Coding
@@ -96,6 +99,7 @@ npx honkit serve
 - [ ] 部署生产级 Claude 应用架构
 
 ### 目录结构
+
 ```
 第一部分：基础篇
 ├── Claude 概览与模型选择
@@ -157,4 +161,3 @@ npx honkit serve
 ## 📈 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=yeasy/claude_guide&type=Date)](https://star-history.com/#yeasy/claude_guide&Date)
-

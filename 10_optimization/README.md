@@ -2,7 +2,7 @@
 
 合理管理成本和优化性能是生产应用的关键。
 
-![成本优化策略概览](_images/cost_optimization.png)
+![成本优化策略概览](_images/cost_optimization.jpg)
 
 ---
 
