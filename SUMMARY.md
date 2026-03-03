@@ -55,17 +55,18 @@
 
 * [第七章 Agentic Coding 与 Claude Code](07_coding/README.md)
   * [7.1 Claude 作为编程助手](07_coding/7.1_assistant.md)
-  * [7.2 Claude Code CLI 入门](07_coding/7.2_cli.md)
+  * [7.2 Claude Code CLI 入门与基础运维](07_coding/7.2_cli.md)
   * [7.3 Claude Code SDK 集成](07_coding/7.3_sdk.md)
   * [7.4 IDE 集成与工作流](07_coding/7.4_ide.md)
   * [7.5 自主编码实践与案例](07_coding/7.5_practical.md)
+  * [7.6 Claude Code 高阶特性与多端生态](07_coding/7.6_advanced.md)
 
 * [第八章 Agent 架构设计](08_agent/README.md)
   * [8.1 什么是 AI Agent](08_agent/8.1_intro.md)
   * [8.2 Agent 设计模式](08_agent/8.2_patterns.md)
   * [8.3 上下文管理与记忆](08_agent/8.3_memory.md)
   * [8.4 扩展思考](08_agent/8.4_extended_thinking.md)
-  * [8.5 多 Agent 协作](08_agent/8.5_collaboration.md)
+  * [8.5 多 Agent 协作与 Agent SDK](08_agent/8.5_collaboration.md)
 
 ## 第四部分：实战篇
 
@@ -73,7 +74,7 @@
   * [9.1 智能客服系统](09_practical/9.1_customer_service.md)
   * [9.2 文档处理与知识库](09_practical/9.2_doc_processing.md)
   * [9.3 数据分析助手](09_practical/9.3_data_analysis.md)
-  * [9.4 自动化测试与 QA](09_practical/9.4_qa_test.md)
+  * [9.4 自动化研发流水线与 QA](09_practical/9.4_qa_test.md)
 
 * [第十章 成本优化与性能调优](10_optimization/README.md)
   * [10.1 Token 计费原理](10_optimization/10.1_pricing.md)
