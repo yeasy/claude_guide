@@ -2,7 +2,20 @@
 
 合理管理成本和优化性能是生产应用的关键。
 
-![成本优化策略概览](_images/cost_optimization.jpg)
+```mermaid
+graph TD
+    classDef s1 fill:#E65100,stroke:#333,stroke-width:2px,color:white,font-weight:bold
+    classDef s2 fill:#1565C0,stroke:#333,stroke-width:2px,color:white,font-weight:bold
+    classDef s3 fill:#2E7D32,stroke:#333,stroke-width:2px,color:white,font-weight:bold
+    classDef s4 fill:#7B1FA2,stroke:#333,stroke-width:2px,color:white,font-weight:bold
+    classDef center fill:#FFF3E0,stroke:#E65100,stroke-width:3px,color:#333,font-weight:bold
+
+    C["💰 Cost Optimization<br/>Strategies"]:::center
+    C --> T["1⃣ Token Pricing<br/>Input/Output<br/>per-token billing"]:::s1
+    C --> P["2⃣ Prompt Caching<br/>Cache static context<br/>90% cost reduction"]:::s2
+    C --> W["3⃣ Context Window<br/>Manage token budget<br/>Summarize + Trim"]:::s3
+    C --> M["4⃣ Model Selection<br/>Haiku < Sonnet < Opus<br/>Right model for task"]:::s4
+```
 
 ---
 
