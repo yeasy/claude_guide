@@ -31,7 +31,7 @@
 
 #### 工程化迭代
 
-*   Prompt 不是写出来的，是**测出来的**。
+*   Prompt 不是写出来的，是 **测出来的**。
 *   建立由真实用例组成的 **Golden Dataset**。
 *   利用 **Metaprompting** 让 AI 帮你写 AI。
 

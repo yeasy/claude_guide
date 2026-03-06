@@ -13,7 +13,7 @@
 
 #### 文档处理
 
-*   **Claude Vision** 让 OCR 变成了 "OCR + Understanding"。
+*   **Claude Vision** 让 OCR 变成了 “OCR + Understanding”。
 *   从合同比对到发票录入，AI 正在重构 Back-office 的工作流。
 *   关键点在于 **Structured Output** (JSON)，这是连接 AI 与 ERP 的桥梁。
 

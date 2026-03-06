@@ -15,8 +15,8 @@
   * [2.1 提示词基础：清晰、直接、具体](02_prompt/2.1_basics.md)
   * [2.2 使用 XML 标签结构化指令](02_prompt/2.2_xml.md)
   * [2.3 系统提示词设计](02_prompt/2.3_system_prompt.md)
-  * [2.4 少样本学习与示例设计](02_prompt/2.4_few_shot.md)
-  * [2.5 思维链与逐步推理](02_prompt/2.5_cot.md)
+  * [2.4 少样本学习：AI 的"举一反三"](02_prompt/2.4_few_shot.md)
+  * [2.5 链式思维与逐步推理](02_prompt/2.5_cot.md)
   * [2.6 输出格式控制](02_prompt/2.6_format.md)
   * [2.7 提示词优化与调试](02_prompt/2.7_optimization.md)
   * [本章小结](02_prompt/summary.md)
@@ -74,6 +74,7 @@
   * [8.3 上下文管理与记忆](08_agent/8.3_memory.md)
   * [8.4 扩展思考](08_agent/8.4_extended_thinking.md)
   * [8.5 多 Agent 协作与 Agent SDK](08_agent/8.5_collaboration.md)
+  * [8.6 Agent SDK 深度指南](08_agent/8.6_agent_sdk_deep_dive.md)
   * [本章小结](08_agent/summary.md)
 
 ## 第四部分：实战篇
@@ -103,6 +104,14 @@
 
 * [结语：从工具到伙伴](EPILOGUE.md)
 
+## 第五部分：未来视野
+
+* [第十三章 未来视野：Claude 5 与新时代的 AI 应用](13_future/README.md)
+  * [13.1 Claude 5 预发布与未来展望](13_future/13.1_claude5_preview.md)
+  * [13.2 Infinite Chats 实战指南](13_future/13.2_infinite_chats.md)
+  * [13.3 Context Engineering 概览](13_future/13.3_context_engineering.md)
+  * [本章小结](13_future/summary.md)
+
 ## 附录
 
 * [附录 A：Claude API 快速参考](12_appendix/12.1_api_ref.md)
@@ -110,3 +119,4 @@
 * [附录 C：术语表](12_appendix/12.3_glossary.md)
 * [附录 D：延伸阅读与资源](12_appendix/12.4_resources.md)
 * [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
+* [附录 F：Claude 与竞品对比](12_appendix/12.6_model_comparison.md)

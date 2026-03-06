@@ -34,3 +34,4 @@ Agentic Coding 指 Claude 作为自主编程代理，能够：
 | [7.3](7.3_sdk.md) | Claude Code SDK 集成 |
 | [7.4](7.4_ide.md) | IDE 集成与工作流 |
 | [7.5](7.5_practical.md) | 自主编码实践与案例 |
+| [7.6](7.6_advanced.md) | Claude Code 高阶特性与多端生态 |

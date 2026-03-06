@@ -7,7 +7,7 @@
 #### 概念定义
 
 *   **Skills = System Prompt + Tools + Knowledge**。
-*   它不同于简单的 Prompt，它是一个包含完整上下文和可执行能力的**软件包**。
+*   它不同于简单的 Prompt，它是一个包含完整上下文和可执行能力的 **软件包**。
 *   核心理念是 **On-Demand Loading (按需加载)**：只在需要时才注入上下文，节省 Token 并减少干扰。
 
 #### 工程化结构

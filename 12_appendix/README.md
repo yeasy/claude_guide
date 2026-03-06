@@ -12,6 +12,8 @@
 | [附录 B](12.2_faq.md) | 常见问题解答 (FAQ) |
 | [附录 C](12.3_glossary.md) | 术语表 |
 | [附录 D](12.4_resources.md) | 优质资源清单 |
+| [附录 E](12.5_pricing.md) | Claude 定价与成本参考 |
+| [附录 F](12.6_model_comparison.md) | Claude 与竞品对比 |
 
 ---
 
