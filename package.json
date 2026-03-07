@@ -13,7 +13,7 @@
     "gitbook-plugin-copy-code-button": "^0.0.2",
     "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "gitbook-plugin-search-pro": "^2.0.2",
-    "honkit": "^6.1.4"
+    "honkit": "^6.1.6"
   },
   "private": true
 }
