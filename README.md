@@ -155,6 +155,7 @@ npx honkit serve
 | [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 全面掌握智能体架构、多智能体协作与 AgentOps |
 | [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | LLM 安全攻防与治理 |
 | [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源自驱型智能体框架的使用与原理 |
+| [《大模型原理与架构》](https://github.com/yeasy/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
 
 ---
 
