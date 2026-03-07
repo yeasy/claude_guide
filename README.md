@@ -1,22 +1,24 @@
+<div align="center">
+
 # Claude 技术指南
 
-[![License](https://img.shields.io/github/license/yeasy/claude_guide)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yeasy/claude_guide)](https://github.com/yeasy/claude_guide/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/yeasy/claude_guide)](https://github.com/yeasy/claude_guide/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/yeasy/claude_guide)](https://github.com/yeasy/claude_guide/pulls)
-[![GitHub last commit](https://img.shields.io/github/last-commit/yeasy/claude_guide)](https://github.com/yeasy/claude_guide/commits/master)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![GitHub stars](https://img.shields.io/github/stars/yeasy/claude_guide?style=social)](https://github.com/yeasy/claude_guide)
+[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/claude_guide)
 
 > **从零开始，系统掌握 Anthropic Claude 的核心能力与最佳实践**
-> 
-> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/4/4.5/4.6 等各版本中均适用。针对特定模型的差异（如 Computer Use），会特别标注。*
 
-![Claude Guide in Gitbook](_images/gitbook.png)
+<img src="_images/gitbook.png" width="300" alt="Claude 技术指南封面">
+
+</div>
 
 ---
 
-## 📖 关于本书 | About
+## 关于本书
 
 **Claude** 是目前业界最先进的生产环境大语言模型之一。本书是一本面向初学者和进阶用户的 Claude 完整学习指南，旨在帮助读者深入理解并掌握这一强大的 AI 工具。
+
+> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/4/4.5/4.6 等各版本中均适用。针对特定模型的差异（如 Computer Use），会特别标注。*
 
 全书将系统性地介绍 Claude 的核心能力体系，包括：
 
@@ -31,7 +33,7 @@
 
 ---
 
-## 👥 目标读者 | Target Audience
+## 目标读者
 
 | 读者类型 | 你将获得什么 |
 |---------|-------------|
@@ -41,64 +43,11 @@
 | **AI 研究爱好者** | 深入理解大语言模型的能力演进与设计原理 |
 | **Claude 用户** | 提升日常使用效率，解锁高级功能 |
 
-**前置知识要求**：
-* 基础计算机操作经验
-* 对大语言模型有初步了解（非必需）
-* 能够访问 Claude（[claude.ai](https://claude.ai) 或 [API](https://claude.com/platform/api)）
+**前置知识要求**：基础计算机操作经验；对大语言模型有初步了解（非必需）；能够访问 Claude（[claude.ai](https://claude.ai) 或 [API](https://claude.com/platform/api)）。
 
 ---
 
-## 🚀 快速开始 | Getting Started
-
-### 在线阅读
-
-👉 **[在线阅读 (GitBook)](https://yeasy.gitbook.io/claude_guide/)**
-
-### 本地阅读
-
-本书使用 [HonKit](https://github.com/honkit/honkit) 构建。
-
-```bash
-# 1. 克隆仓库
-git clone https://github.com/yeasy/claude_guide.git
-cd claude_guide
-
-# 2. 安装依赖
-npm install
-
-# 3. 启动本地服务器
-npx honkit serve
-```
-
-启动后，访问 `http://localhost:4000` 即可阅读。
-
----
-
-## 📚 内容大纲 | Contents
-
-### 🎯 基础能力
-
-- [ ] 理解 Claude 的能力矩阵与模型选择策略
-- [ ] 编写高质量的系统提示词（System Prompt）
-- [ ] 使用 XML 标签结构化复杂指令
-- [ ] 应用少样本学习（Few-shot Learning）和思维链（Chain of Thought）
-
-### 🔧 中级技能
-
-- [ ] 定义并调用自定义工具（Tool Use）
-- [ ] 实现多轮对话与上下文管理
-- [ ] 使用 Files API 处理文档
-- [ ] 配置 MCP 服务器连接外部数据源
-
-### 🚀 高级应用
-
-- [ ] 构建具备 Computer Use 能力的 AI Agent
-- [ ] 设计可复用的 Skills 工作流
-- [ ] 使用 Claude Code SDK 实现 Agentic Coding
-- [ ] 优化 Token 使用与成本控制
-- [ ] 部署生产级 Claude 应用架构
-
-### 目录结构
+## 内容大纲
 
 ```
 第一部分：基础篇
@@ -125,30 +74,27 @@ npx honkit serve
 
 ---
 
-## 🤝 贡献 | Contributing
+## 阅读方式
 
-欢迎任何形式的贡献！无论是纠正错别字、补充新内容，还是分享你的实践经验。
+**在线阅读**：[https://yeasy.gitbook.io/claude_guide/](https://yeasy.gitbook.io/claude_guide/)
 
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的修改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启一个 Pull Request
+**本地阅读**（使用 [HonKit](https://github.com/honkit/honkit) 构建）：
 
----
+```bash
+npm install        # 安装依赖
+npx honkit serve
+```
 
-## 📜 协议 | License
-
-本书内容遵循 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议。
+启动本地服务器后，访问 [http://localhost:4000](http://localhost:4000)
 
 ---
 
-## 📚 推荐阅读 | Related Books
+## 推荐阅读
 
-如果你对 Claude 以外的 AI 技术也感兴趣，以下丛书为你提供完整的学习路径：
+本书是 AI 技术丛书的一部分。以下书籍与本书形成互补：
 
-| 书名 | 说明 |
-|------|------|
+| 书名 | 与本书的关系 |
+|------|------------|
 | [《零基础学 AI》](https://github.com/yeasy/ai_beginner_guide) | AI 零基础入门，适合作为本书的前置阅读 |
 | [《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) | 深入提示词工程的通用原理与最佳实践 |
 | [《大模型上下文工程权威指南》](https://github.com/yeasy/context_engineering_guide) | 系统掌握上下文工程，从提示词到生产级 AI 系统 |
@@ -159,6 +105,10 @@ npx honkit serve
 
 ---
 
-## 📈 Star History
+## 贡献与反馈
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yeasy/claude_guide&type=Date)](https://star-history.com/#yeasy/claude_guide&Date)
+欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)，尤其欢迎：错别字修正、失效链接修复、实践案例补充。
+
+## 许可证
+
+本书采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 授权。
