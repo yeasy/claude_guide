@@ -44,3 +44,6 @@ OpenAI o1 很强，Claude 3.5 Opus 很强，但它们都很贵。如果你的应
 接下来将进入[第十章](../10_optimization/README.md)，学习 **Optimization & Tuning**。
 
 ➡️ [成本优化与性能调优](../10_optimization/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

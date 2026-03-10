@@ -59,3 +59,6 @@ graph LR
 让我们进入[**第八章**](../08_agent/README.md)，设计真正的 **Agent 架构**。
 
 ➡️ [Agent 架构设计](../08_agent/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

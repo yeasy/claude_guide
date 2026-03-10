@@ -52,3 +52,6 @@
 答案就是 **MCP (Model Context Protocol)**。
 
 ➡️ [进入第 4 章：MCP 模型上下文协议](../04_mcp/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

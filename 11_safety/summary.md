@@ -39,3 +39,6 @@
 Go build something amazing!
 
 ➡️ [附录：资源与工具清单](../12_appendix/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

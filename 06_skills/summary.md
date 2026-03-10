@@ -44,3 +44,6 @@
 让我们进入[第七章](../07_coding/README.md)，探索 Claude 最被程序员称道的能力——**Agentic Coding**。
 
 ➡️ [Agentic Coding 智能编程](../07_coding/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

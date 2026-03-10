@@ -50,3 +50,6 @@
 是时候打破第四面墙，让它连接 API、数据库和外部世界了。
 
 ➡️ [第三章：Tool Use 工具调用](../03_tools/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

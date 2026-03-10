@@ -44,3 +44,6 @@ MCP 解决了“API 连接”的问题。但这个世界上还有大量软件 **
 答案是：**像人一样，去看，去点，去敲键盘。**
 
 ➡️ [第五章：Computer Use 计算机控制](../05_computer_use/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

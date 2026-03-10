@@ -46,3 +46,6 @@
 [第十一章](../11_safety/README.md)，将探讨 AI 的 **安全与伦理 (Trust & Safety)**，这是所有 AI 应用上线前的最后一道必答题。
 
 ➡️ [安全与伦理](../11_safety/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

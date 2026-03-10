@@ -42,3 +42,6 @@ Claude 早已超越了“聊天机器人”的范畴。
 不管是写代码、写文章还是做分析，输出质量的 80% 取决于你如何向 Claude 提问。下一章，我们将深入探讨 **Prompt Engineering（提示工程）** 的艺术与科学，教你如何像“指令大师”一样驾驭 Claude。
 
 ➡️ [第二章：提示工程核心技术](../02_prompt/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

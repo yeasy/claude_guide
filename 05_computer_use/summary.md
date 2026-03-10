@@ -40,3 +40,6 @@ Computer Use 是 AI 发展史上的一个分水岭。它标志着大模型不再
 下一章，将为 Claude 装备 **Skills**。
 
 ➡️ [第六章：Skills 技能系统](../06_skills/README.md)
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。

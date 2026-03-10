@@ -304,3 +304,6 @@ RAG（检索增强生成）是上下文工程的实践工具：
 **本章完**
 
 进阶阅读建议：返回第一章，用新的视角重新审视 Claude 的能力和使用模式。
+---
+
+> 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。
