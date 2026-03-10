@@ -35,3 +35,7 @@ Agent = LLM + 工具 + 记忆 + 规划
 | [8.4](8.4_extended_thinking.md) | Extended Thinking 扩展思考 |
 | [8.5](8.5_collaboration.md) | 多 Agent 协作 |
 | [8.6](8.6_agent_sdk_deep_dive.md) | Agent SDK 深度指南 |
+
+---
+
+> **📚 延伸阅读**：关于智能体架构的通用设计模式，参见 [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide)。
