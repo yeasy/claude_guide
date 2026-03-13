@@ -15,7 +15,7 @@
   * [2.1 提示词基础：清晰、直接、具体](02_prompt/2.1_basics.md)
   * [2.2 使用 XML 标签结构化指令](02_prompt/2.2_xml.md)
   * [2.3 系统提示词设计](02_prompt/2.3_system_prompt.md)
-  * [2.4 少样本学习：AI 的"举一反三"](02_prompt/2.4_few_shot.md)
+  * [2.4 少样本学习：AI 的“举一反三”](02_prompt/2.4_few_shot.md)
   * [2.5 链式思维与逐步推理](02_prompt/2.5_cot.md)
   * [2.6 输出格式控制](02_prompt/2.6_format.md)
   * [2.7 提示词优化与调试](02_prompt/2.7_optimization.md)
@@ -107,7 +107,7 @@
 ## 第五部分：未来视野
 
 * [第十三章 未来视野：Claude 5 与新时代的 AI 应用](13_future/README.md)
-  * [13.1 Claude 5 预发布与未来展望](13_future/13.1_claude5_preview.md)
+  * [13.1 Claude 4.x 现状与 Claude 5 展望](13_future/13.1_claude5_preview.md)
   * [13.2 Infinite Chats 实战指南](13_future/13.2_infinite_chats.md)
   * [13.3 Context Engineering 概览](13_future/13.3_context_engineering.md)
   * [本章小结](13_future/summary.md)
