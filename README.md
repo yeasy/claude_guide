@@ -8,7 +8,7 @@
 
 > **从零开始，系统掌握 Anthropic Claude 的核心能力与最佳实践**
 
-<img src="_images/gitbook.png" width="300" alt="Claude 技术指南封面">
+<img src="_images/claude_tech_guide_cover.png" width="300" alt="Claude 技术指南封面">
 
 </div>
 
