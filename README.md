@@ -29,7 +29,7 @@
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-本书基于最新的 **Claude 4.6 Sonnet**、**Claude 4.6 Opus** 及 **Claude 4.5 Haiku** 模型，提供经过验证的最佳实践。
+本书基于最新的 **Claude Sonnet 4.6**、**Claude Opus 4.6** 及 **Claude Haiku 4.5** 模型，提供经过验证的最佳实践。
 
 ---
 
