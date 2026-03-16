@@ -4,7 +4,7 @@
 
 ### 核心知识点回顾
 
-#### 三大基石 (Clear, Direct, Specific)
+#### 三大基石：Clear, Direct, Specific
 
 所有高级技巧都建立在清晰的表达之上。
 *   **消除歧义**：不要让 AI 猜。
@@ -50,6 +50,7 @@
 是时候打破第四面墙，让它连接 API、数据库和外部世界了。
 
 ➡️ [第三章：Tool Use 工具调用](../03_tools/README.md)
+
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。
