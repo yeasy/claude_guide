@@ -257,9 +257,9 @@ RAG（检索增强生成）是上下文工程的实践工具：
 
 ### 官方资源
 
-- Anthropic 技术博客：https://www.anthropic.com/blog
-- Claude API 文档：https://docs.anthropic.com
-- MCP 规范：https://modelcontextprotocol.io
+- [Anthropic 技术博客](https://www.anthropic.com/blog)
+- [Claude API 文档](https://docs.anthropic.com)
+- [MCP 规范](https://modelcontextprotocol.io)
 
 ### 关键论文
 
