@@ -76,7 +76,7 @@
 
 ## 阅读方式
 
-**在线阅读**：[https://yeasy.gitbook.io/claude_guide/](https://yeasy.gitbook.io/claude_guide/)
+**在线阅读**：[GitBook 在线版](https://yeasy.gitbook.io/claude_guide/)
 
 **本地阅读**（使用 [HonKit](https://github.com/honkit/honkit) 构建）：
 
@@ -85,7 +85,7 @@ npm install        # 安装依赖
 npx honkit serve
 ```
 
-启动本地服务器后，访问 [http://localhost:4000](http://localhost:4000)
+启动本地服务器后，访问 [本地阅读地址](http://localhost:4000)
 
 ---
 
