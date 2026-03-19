@@ -78,17 +78,10 @@
 
 **在线阅读**：[GitBook 在线版](https://yeasy.gitbook.io/claude_guide/)
 
-**本地阅读**（使用 [HonKit](https://github.com/honkit/honkit) 构建）：
+**本地阅读**（使用 [mdPress](https://github.com/yeasy/mdpress) 构建）：
 
 ```bash
-npm install        # 安装依赖
-npx honkit serve
-```
-
-或使用 [mdpress](https://github.com/yeasy/mdpress) 构建：
-
-```bash
-go install github.com/yeasy/mdpress@latest
+brew tap yeasy/tap && brew install mdpress
 mdpress serve
 ```
 
