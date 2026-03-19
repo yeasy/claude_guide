@@ -38,7 +38,7 @@
 希望这本书能成为你在这个新时代的航海图。
 Go build something amazing!
 
-➡️ [附录：资源与工具清单](../12_appendix/README.md)
+➡️ [附录：资源与工具清单](../12_appendix/12.4_resources.md)
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。
