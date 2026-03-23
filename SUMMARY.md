@@ -106,7 +106,7 @@
 
 ## 第五部分：未来视野
 
-* [第十二章 未来视野：Claude 5 与新时代的 AI 应用](13_future/README.md)
+* [第十三章 未来视野：Claude 5 与新时代的 AI 应用](13_future/README.md)
   * [13.1 Claude 4.x 现状与 Claude 5 展望](13_future/13.1_claude5_preview.md)
   * [13.2 Infinite Chats 实战指南](13_future/13.2_infinite_chats.md)
   * [13.3 Context Engineering 概览](13_future/13.3_context_engineering.md)
