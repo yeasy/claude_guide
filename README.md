@@ -78,11 +78,11 @@
 
 **在线阅读**：[GitBook 在线版](https://yeasy.gitbook.io/claude_guide/)
 
-**本地阅读**（使用 [mdPress](https://github.com/yeasy/mdpress) 构建）：
+**本地阅读**（先安装 [mdPress](https://github.com/yeasy/mdpress)）：
 
 ```bash
 brew tap yeasy/tap && brew install mdpress
-mdpress serve
+npm run serve
 ```
 
 启动本地服务器后，访问 [本地阅读地址](http://localhost:4000)
