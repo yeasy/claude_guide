@@ -8,13 +8,6 @@
     "build": "rm -rf _site _site_site && mdpress build --format site --output _site && rm -rf _site && mv _site_site _site",
     "pdf": "mdpress build --format pdf"
   },
-  "devDependencies": {
-    "gitbook-plugin-back-to-top-button": "^0.1.4",
-    "gitbook-plugin-chapter-fold": "^0.0.4",
-    "gitbook-plugin-copy-code-button": "^0.0.2",
-    "gitbook-plugin-mermaid-gb3": "^2.1.0",
-    "gitbook-plugin-search-pro": "^2.0.2",
-    "honkit-plugin-prism": "^2.5.4"
-  },
+  "devDependencies": {},
   "private": true
 }
