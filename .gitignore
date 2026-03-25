@@ -13,6 +13,7 @@ Thumbs.db
 
 # GitBook/Build artifacts
 _book/
+_site*
 node_modules/
 npm-debug.log*
 yarn-debug.log*
