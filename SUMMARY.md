@@ -104,13 +104,13 @@
 
 * [结语：从工具到伙伴](EPILOGUE.md)
 
-## 第五部分：未来视野
+## 第五部分：进阶能力
 
-* [第十三章 未来视野：Claude 5 与新时代的 AI 应用](13_future/README.md)
-  * [13.1 Claude 4.x 现状与 Claude 5 展望](13_future/13.1_claude5_preview.md)
-  * [13.2 Infinite Chats 实战指南](13_future/13.2_infinite_chats.md)
-  * [13.3 Context Engineering 概览：从提示词工程到上下文工程](13_future/13.3_context_engineering.md)
-  * [第十三章 小结：未来视野的关键要点](13_future/summary.md)
+* [第十三章 进阶能力：Claude 前沿特性与上下文工程](13_advanced/README.md)
+  * [13.1 Claude 4.x 现状与 Claude 5 展望](13_advanced/13.1_claude5_preview.md)
+  * [13.2 Infinite Chats 实战指南](13_advanced/13.2_infinite_chats.md)
+  * [13.3 Context Engineering 概览：从提示词工程到上下文工程](13_advanced/13.3_context_engineering.md)
+  * [第十三章 小结：进阶能力的关键要点](13_advanced/summary.md)
 
 ## 附录
 
