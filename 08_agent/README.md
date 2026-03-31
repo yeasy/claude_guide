@@ -38,4 +38,4 @@ Agent = LLM + 工具 + 记忆 + 规划
 
 ---
 
-> **📚 延伸阅读**：关于智能体架构的通用设计模式，参见 [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide)。
+> 💡 **延伸阅读**：如需深入了解智能体架构与多智能体协作，请参阅[《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide)。

@@ -143,13 +143,13 @@ graph LR
 
 | 书名 | 与本书的关系 |
 |------|------------|
-| [《零基础学 AI》](https://github.com/yeasy/ai_beginner_guide) | AI 零基础入门，适合作为本书的前置阅读 |
-| [《大模型提示词工程指南》](https://github.com/yeasy/prompt_engineering_guide) | 深入提示词工程的通用原理与最佳实践 |
-| [《大模型上下文工程权威指南》](https://github.com/yeasy/context_engineering_guide) | 系统掌握上下文工程，从提示词到生产级 AI 系统 |
-| [《智能体 AI 权威指南》](https://github.com/yeasy/agentic_ai_guide) | 全面掌握智能体架构、多智能体协作与 AgentOps |
-| [《大模型安全权威指南》](https://github.com/yeasy/ai_security_guide) | LLM 安全攻防与治理 |
-| [《OpenClaw 从入门到精通》](https://github.com/yeasy/openclaw_guide) | 开源自驱型智能体框架的使用与原理 |
-| [《大模型原理与架构》](https://github.com/yeasy/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
+| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合作为本书的前置阅读 |
+| [《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) | 深入提示词工程的通用原理与最佳实践 |
+| [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide) | 系统掌握上下文工程，从提示词到生产级 AI 系统 |
+| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 全面掌握智能体架构、多智能体协作与 AgentOps |
+| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | LLM 安全攻防与治理 |
+| [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 开源自驱型智能体框架的使用与原理 |
+| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
 
 ---
 

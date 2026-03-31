@@ -42,4 +42,4 @@ MCP 是大模型对其他资源或工具的统一访问接口标准，就像 AI 
 
 ---
 
-> **📚 延伸阅读**：MCP 协议在 OpenClaw 中的实战集成案例，参见 [《OpenClaw 从入门到精通》第 12 章](https://github.com/yeasy/openclaw_guide)；MCP 与上下文工程的结合，参见 [《大模型上下文工程权威指南》](https://github.com/yeasy/context_engineering_guide)。
+> **📚 延伸阅读**：MCP 协议在 OpenClaw 中的实战集成案例，参见 [《OpenClaw 从入门到精通》第 12 章](https://yeasy.gitbook.io/openclaw_guide)；MCP 与上下文工程的结合，参见 [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide)。
