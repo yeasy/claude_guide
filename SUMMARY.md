@@ -110,6 +110,7 @@
   * [13.1 Claude 4.x 现状与 Claude 5 展望](13_advanced/13.1_claude5_preview.md)
   * [13.2 Infinite Chats 实战指南](13_advanced/13.2_infinite_chats.md)
   * [13.3 Context Engineering 概览：从提示词工程到上下文工程](13_advanced/13.3_context_engineering.md)
+  * [13.4 模型内部可解释性：Anthropic 的解释性研究进展](13_advanced/13.4_model_interpretability.md)
   * [第十三章 小结：进阶能力的关键要点](13_advanced/summary.md)
 
 ## 附录
