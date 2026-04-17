@@ -30,6 +30,7 @@
   * [3.4 Agent 编排模式与复杂流程](03_tools/3.4_orchestration.md)
   * [3.5 高级特性：程序化工具调用与代码执行](03_tools/3.5_programmatic.md)
   * [3.6 工具搜索：大规模工具库的管理之道](03_tools/3.6_tool_search.md)
+  * [3.7 结构化输出：保证响应格式的可靠性](03_tools/3.7_structured_outputs.md)
   * [本章小结：从对话到行动](03_tools/summary.md)
 
 * [第四章 MCP 模型上下文协议](04_mcp/README.md)
@@ -66,6 +67,8 @@
   * [7.4 IDE 集成与工作流](07_coding/7.4_ide.md)
   * [7.5 自主编码实践与案例](07_coding/7.5_practical.md)
   * [7.6 Claude Code 高阶特性与多端生态](07_coding/7.6_advanced.md)
+  * [7.7 Routines：Claude Code 自动化任务](07_coding/7.7_routines.md)
+  * [7.8 Cowork：面向全员的 Agent 工具](07_coding/7.8_cowork.md)
   * [本章小结：从编程助手到 AI 合伙人](07_coding/summary.md)
 
 * [第八章 Agent 架构设计](08_agent/README.md)
@@ -75,6 +78,7 @@
   * [8.4 扩展思考：深度推理模式](08_agent/8.4_extended_thinking.md)
   * [8.5 多 Agent 协作模式与实现框架](08_agent/8.5_collaboration.md)
   * [8.6 Agent SDK 深度指南：构建多智能体协作系统](08_agent/8.6_agent_sdk_deep_dive.md)
+  * [8.7 Managed Agents：全托管 Agent 平台](08_agent/8.7_managed_agents.md)
   * [本章小结：构建智能体系统的艺术](08_agent/summary.md)
 
 ## 第四部分：实战篇
