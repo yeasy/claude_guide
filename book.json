@@ -2,24 +2,5 @@
     "title": "Claude 技术指南",
     "description": "Claude 技术指南 - 从理论到实践，掌握 Claude 的核心能力与最佳实践",
     "author": "yeasy",
-    "language": "zh-hans",
-    "plugins": [
-        "mermaid-gb3",
-        "chapter-fold",
-        "back-to-top-button",
-        "copy-code-button",
-        "search-pro",
-        "-search",
-        "-lunr"
-    ],
-    "pluginsConfig": {
-        "mermaid-gb3": {
-            "theme": "default"
-        },
-        "chapter-fold": {},
-        "copy-code-button": {
-            "copyButtons": true,
-            "stripComments": false
-        }
-    }
+    "language": "zh-hans"
 }
