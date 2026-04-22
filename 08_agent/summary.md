@@ -7,8 +7,8 @@
 #### Agent 的解剖学
 
 *   **Brain (LLM)**: 核心决策中枢。Claude Sonnet 4.6 是目前的版本答案。
-*   **Planning (ReAct/Plan-Solve)**: 决定是“走一步看一步”还是“谋定而后动”。
-*   **Memory (RAG/VectorDB)**: 突破 200k Token 限制，让 Agent 拥有长期记忆。
+*   **Planning (ReAct/Plan-Solve)**: 决定是”走一步看一步”还是”谋定而后动”。
+*   **Memory (RAG/VectorDB)**: 超越上下文窗口限制，让 Agent 拥有长期记忆。
 *   **Action (MCP)**: 连接现实世界的四肢。
 
 #### 思考的进化
