@@ -20,7 +20,7 @@
 
 **Claude** 是目前业界最先进的生产环境大语言模型之一。本书是一本面向初学者和进阶用户的 Claude 完整学习指南，旨在帮助读者深入理解并掌握这一强大的 AI 工具。
 
-> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/4/4.5/4.6 等各版本中均适用。针对特定模型的差异（如 Computer Use），会特别标注。*
+> *注：本书内容核心侧重于通用的 Prompt 原理与工程化实践，这些原则在 Claude 3/4/4.5/4.6/4.7 等各版本中均适用。针对特定模型的差异（如 Computer Use），会特别标注。*
 
 全书将系统性地介绍 Claude 的核心能力体系，包括：
 
@@ -31,7 +31,7 @@
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-本书基于最新的 **Claude Sonnet 4.6**、**Claude Opus 4.6** 及 **Claude Haiku 4.5** 模型，提供经过验证的最佳实践。
+本书基于最新的 **Claude Opus 4.7**、**Claude Sonnet 4.6** 及 **Claude Haiku 4.5** 模型，提供经过验证的最佳实践。
 
 ---
 
