@@ -48,7 +48,7 @@ graph LR
 - [ ] **工具就绪**：我是否安装了 `claude-code` CLI 并配置了 `.clauderc`？
 - [ ] **环境集成**：我的 IDE (VS Code/Cursor) 是否能顺畅地调用 Claude？
 - [ ] **协作模式**：我是否尝试过“我写 Test，它写 Code”的 TDD 模式？
-- [ ] **安全意识**：在 CLI 中使用自动模式 (`--auto`) 时，我是否清楚这一步操作的后果（尤其是 `rm`, `git push`）？
+- [ ] **安全意识**：在 CLI 中使用自动模式 (`--permission-mode auto`) 时，我是否清楚这一步操作的后果（尤其是 `rm`, `git push`）？
 
 ### 下一站：构建 AI 员工
 
