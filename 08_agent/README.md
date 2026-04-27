@@ -35,6 +35,7 @@ Agent = LLM + 工具 + 记忆 + 规划
 | [8.4](8.4_extended_thinking.md) | Extended Thinking 扩展思考 |
 | [8.5](8.5_collaboration.md) | 多 Agent 协作 |
 | [8.6](8.6_agent_sdk_deep_dive.md) | Agent SDK 深度指南 |
+| [8.7](8.7_managed_agents.md) | Managed Agents 全托管平台 |
 
 ---
 

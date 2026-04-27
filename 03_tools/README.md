@@ -38,6 +38,7 @@ Claude 本身有以下局限：
 | [3.4](3.4_orchestration.md) | 多工具编排与复杂流程   |
 | [3.5](3.5_programmatic.md)  | 高级特性：程序化工具调用 |
 | [3.6](3.6_tool_search.md)   | 管理大型工具库：工具搜索 |
+| [3.7](3.7_structured_outputs.md) | 结构化输出：保证响应格式的可靠性 |
 
 ---
 

@@ -31,13 +31,7 @@
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-**模型事实核验日期：2026-04-27**。官方来源：[模型概览](https://platform.claude.com/docs/en/about-claude/models/overview)、[价格](https://platform.claude.com/docs/en/about-claude/pricing)、[模型状态](https://platform.claude.com/docs/en/about-claude/model-deprecations)。模型 ID、价格、上下文窗口和弃用状态变化很快，生产选型请以官方页面为准。
-
-| 模型 | API ID | 上下文 | 价格（输入/输出，per MTok） | 状态 | 最早退役日期 |
-|------|--------|--------|-----------------------------|------|--------------|
-| Claude Opus 4.7 | `claude-opus-4-7` | 1M | $5 / $25 | Active | not sooner than 2027-04-16 |
-| Claude Sonnet 4.6 | `claude-sonnet-4-6` | 1M | $3 / $15 | Active | not sooner than 2027-02-17 |
-| Claude Haiku 4.5 | `claude-haiku-4-5-20251001` | 200k | $1 / $5 | Active | not sooner than 2026-10-15 |
+本书基于 2026-04-27 核验的 **Claude Opus 4.7**、**Claude Sonnet 4.6** 及 **Claude Haiku 4.5** 模型撰写。模型 ID、价格、上下文窗口和弃用状态变化很快，生产选型请以官方模型页和价格页为准。
 
 ---
 

@@ -35,5 +35,7 @@ Agentic Coding 指 Claude 作为自主编程代理，能够：
 | [7.4](7.4_ide.md) | IDE 集成与工作流 |
 | [7.5](7.5_practical.md) | 自主编码实践与案例 |
 | [7.6](7.6_advanced.md) | Claude Code 高阶特性与多端生态 |
+| [7.7](7.7_routines.md) | Routines：Claude Code 自动化任务 |
+| [7.8](7.8_cowork.md) | Cowork：面向全员的 Agent 工具 |
 
 > 💡 **延伸阅读**：如需系统学习提示词工程技术，请参阅[《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide)。
