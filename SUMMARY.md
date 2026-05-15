@@ -106,8 +106,6 @@
   * [11.6 企业级合规与审计](11_safety/11.6_compliance.md)
   * [本章小结：AI 的安全带](11_safety/summary.md)
 
-* [结语：从工具到伙伴](EPILOGUE.md)
-
 ## 第五部分：进阶能力
 
 * [第十三章 进阶能力：Claude 前沿特性与上下文工程](13_advanced/README.md)
@@ -125,3 +123,5 @@
 * [附录 D：优质资源清单](12_appendix/12.4_resources.md)
 * [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
 * [Claude 与竞品对比：全面的选择指南](12_appendix/12.6_model_comparison.md)
+
+* [结语：从工具到伙伴](EPILOGUE.md)
