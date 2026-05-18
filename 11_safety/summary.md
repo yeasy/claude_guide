@@ -27,18 +27,13 @@
 *   **Augmentation**: AI 是副驾驶，人类是机长。
 *   **Bias Check**: 始终警惕模型可能存在的偏见，并用反事实测试去验证它。
 
-### 全书结语
+### 小结
 
-恭喜你！你已经读完了《Claude 指南：从入门到 Agent 工程化》的所有核心章节。
-本书从最基础的 Prompt Engineering 开始，一路升级到 Tool Use, MCP, Computer Use, Agentic Coding 乃至复杂的 Agent Architecture。
+安全与伦理是 AI 工程化不可或缺的基石。掌握了这些原则，你就为构建负责任的 AI 应用打好了基础。
 
-现在的开发者，已经手握一把锤子（LLM），但这把锤子能变成螺丝刀、电钻甚至 CNC 机床。
-未来的软件开发，将不再是“写代码”，而是“**训练和编排 Agent**”。
+接下来，我们将进入进阶篇，探索 Claude 的前沿特性与上下文工程。
 
-希望这本书能成为你在这个新时代的航海图。
-Go build something amazing!
-
-➡️ [附录：资源与工具清单](../12_appendix/12.4_resources.md)
+➡️ [第十三章：进阶能力](../13_advanced/README.md)
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。
