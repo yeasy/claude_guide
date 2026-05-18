@@ -9,14 +9,20 @@ on:
 permissions:
   contents: write
 
+env:
+  MDPRESS_VERSION: 0.7.10
+  MDPRESS_SHA256: 17e53e455996940bbbce64c69c43b3fb543f1501e03b74cf0434074efebd2db4
+
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
-      - name: Install Chromium and CJK fonts
-        uses: browser-actions/setup-chrome@v2
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@2e1d749697dd1612b833dba4a722266286fbefcd # v2.1.2
         with:
           chrome-version: stable
       - name: Install CJK fonts
@@ -24,12 +30,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
 
-      - name: Install mdpress (latest)
+      - name: Install mdpress v${{ env.MDPRESS_VERSION }}
         run: |
-          LATEST_TAG=$(curl -fsSL -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${{ github.token }}" https://api.github.com/repos/yeasy/mdpress/releases/latest | jq -r .tag_name)
-          VERSION="${LATEST_TAG#v}"
-          echo "Installing mdpress $VERSION"
-          curl -fsSL "https://github.com/yeasy/mdPress/releases/download/$LATEST_TAG/mdpress_${VERSION}_linux_amd64.tar.gz" -o /tmp/mdpress.tar.gz
+          curl -fsSL "https://github.com/yeasy/mdPress/releases/download/v${MDPRESS_VERSION}/mdpress_${MDPRESS_VERSION}_linux_amd64.tar.gz" -o /tmp/mdpress.tar.gz
+          echo "${MDPRESS_SHA256}  /tmp/mdpress.tar.gz" | sha256sum -c -
           tar xzf /tmp/mdpress.tar.gz -C /tmp mdpress
           sudo mv /tmp/mdpress /usr/local/bin/
           mdpress --version
@@ -43,13 +47,13 @@ jobs:
 
       - name: Create Release with PDF
         if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
         with:
           generate_release_notes: true
           files: claude_guide-${{ steps.tag.outputs.TAG_NAME }}.pdf
 
       - name: Upload PDF as artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: claude_guide-pdf
           path: "claude_guide-*.pdf"
