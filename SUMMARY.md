@@ -123,5 +123,6 @@
 * [附录 D：优质资源清单](12_appendix/12.4_resources.md)
 * [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
 * [Claude 与竞品对比：全面的选择指南](12_appendix/12.6_model_comparison.md)
+* [附录 G：快变事实核验表](12_appendix/12.7_volatile_facts.md)
 
 * [结语：从工具到伙伴](EPILOGUE.md)
