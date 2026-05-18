@@ -1,6 +1,6 @@
 # 目录
 
-* [前言](README.md)
+* [Claude 技术指南](README.md)
 
 ## 第一部分：基础篇
 
@@ -12,7 +12,7 @@
   * [本章小结：Claude 全景图](01_intro/summary.md)
 
 * [第二章 提示工程核心技术](02_prompt/README.md)
-  * [2.1 提示词基础：清晰、直接、具体](02_prompt/2.1_basics.md)
+  * [2.1 提示词基础：Claude 特定的最佳实践](02_prompt/2.1_basics.md)
   * [2.2 使用 XML 标签结构化指令](02_prompt/2.2_xml.md)
   * [2.3 系统提示词设计：AI 的“出厂设置”](02_prompt/2.3_system_prompt.md)
   * [2.4 少样本学习：AI 的“举一反三”](02_prompt/2.4_few_shot.md)
@@ -72,7 +72,7 @@
   * [本章小结：从编程助手到 AI 合伙人](07_coding/summary.md)
 
 * [第八章 Agent 架构设计](08_agent/README.md)
-  * [8.1 什么是 Agent：从聊天到行动](08_agent/8.1_intro.md)
+  * [8.1 Claude Agent：为什么选择 Claude？](08_agent/8.1_intro.md)
   * [8.2 Agent 设计模式](08_agent/8.2_patterns.md)
   * [8.3 上下文管理与记忆](08_agent/8.3_memory.md)
   * [8.4 扩展思考：深度推理模式](08_agent/8.4_extended_thinking.md)
