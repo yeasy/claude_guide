@@ -14,6 +14,7 @@
 | [附录 D](12.4_resources.md) | 优质资源清单 |
 | [附录 E](12.5_pricing.md) | Claude 定价与成本参考 |
 | [附录 F](12.6_model_comparison.md) | Claude 与竞品对比 |
+| [附录 G](12.7_volatile_facts.md) | 快变事实核验表 |
 
 ---
 

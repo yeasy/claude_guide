@@ -33,7 +33,7 @@
 
 接下来，我们将进入进阶篇，探索 Claude 的前沿特性与上下文工程。
 
-➡️ [第十二章：进阶能力](../13_advanced/README.md)
+➡️ [第十三章：进阶能力](../13_advanced/README.md)
 ---
 
 > 📝 **发现错误或有改进建议？** 欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)。
