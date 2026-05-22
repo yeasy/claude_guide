@@ -117,12 +117,13 @@
 
 ## 附录
 
-* [附录 A：API 参考手册](12_appendix/12.1_api_ref.md)
-* [附录 B：常见问题解答](12_appendix/12.2_faq.md)
-* [附录 C：术语表](12_appendix/12.3_glossary.md)
-* [附录 D：优质资源清单](12_appendix/12.4_resources.md)
-* [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
-* [附录 F：Claude 与竞品对比：全面的选择指南](12_appendix/12.6_model_comparison.md)
-* [附录 G：快变事实核验表](12_appendix/12.7_volatile_facts.md)
+* [附录总览](12_appendix/README.md)
+  * [附录 A：API 参考手册](12_appendix/12.1_api_ref.md)
+  * [附录 B：常见问题解答](12_appendix/12.2_faq.md)
+  * [附录 C：术语表](12_appendix/12.3_glossary.md)
+  * [附录 D：优质资源清单](12_appendix/12.4_resources.md)
+  * [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
+  * [附录 F：Claude 与竞品对比：全面的选择指南](12_appendix/12.6_model_comparison.md)
+  * [附录 G：快变事实核验表](12_appendix/12.7_volatile_facts.md)
 
 * [结语：从工具到伙伴](EPILOGUE.md)
