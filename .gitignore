@@ -23,5 +23,9 @@ yarn-error.log*
 *.tmp
 *.log
 
+# Python bytecode
+__pycache__/
+*.pyc
+
 .agent
 combine.py
