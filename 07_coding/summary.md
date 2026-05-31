@@ -33,7 +33,7 @@ graph LR
     T -->|"✅ All Pass"| S(["🚀 Ship It!"])
 ```
 
-**图 7-2：Agentic Coding TDD 2.0 循环**
+**图 7-1：Agentic Coding TDD 2.0 循环**
 
 *   **TDD 2.0**: 人写测试，AI 写实现。通过测试用例来约束 AI 的发散，这是目前最稳健的开发模式。
 *   **Legacy Refactoring**: 那些谁也不敢动的“屎山”代码，现在可以放心地交给 AI 去清理、注释和升级。
