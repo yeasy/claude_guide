@@ -164,6 +164,8 @@ RAG（检索增强生成）是上下文工程的实践工具：
 | Claude Sonnet 4.6 | $3.00/M | $15.00/M | $3.75/M | $0.30/M |
 | Claude Opus 4.7 | $5.00/M | $25.00/M | $6.25/M | $0.50/M |
 
+> 注：当前 Opus 线旗舰为 Opus 4.8（2026-05 发布），沿用 4.7 的 $5/$25 定价，上表以 Opus 4.7 数字代表 Opus 线成本。下文决策矩阵中的“Opus 4.7”同理可理解为“Opus 线（当前旗舰为 4.8）”。
+
 ### 长对话管理成本对比
 
 **1000 条消息对话（持续 10 天）**：
@@ -259,7 +261,7 @@ RAG（检索增强生成）是上下文工程的实践工具：
 ### 官方资源
 
 - [Anthropic 技术博客](https://www.anthropic.com/blog)
-- [Claude API 文档](https://docs.anthropic.com)
+- [Claude API 文档](https://platform.claude.com/docs)
 - [MCP 规范](https://modelcontextprotocol.io)
 
 ### 关键论文
