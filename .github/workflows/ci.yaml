@@ -37,6 +37,8 @@ jobs:
           tar xzf /tmp/mdpress.tar.gz -C /tmp mdpress
           sudo mv /tmp/mdpress /usr/local/bin/
           mdpress --version
+      - name: Validate book rules
+        run: python3 check_project_rules.py
       - name: Build PDF
         run: mdpress build --format pdf --output claude_guide.pdf
       - name: Upload PDF as artifact
