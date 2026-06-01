@@ -8,7 +8,7 @@
 
 **已确认能力方向**
 - Claude 4.6 系列和新发布的 Claude Opus 4.7 均延续了 Anthropic 在长上下文、复杂推理和 Agent 工作流上的优势。
-- Claude Sonnet 4.6 适合作为通用主力模型，Claude Opus 4.7（当前最强）适合极度复杂的软件工程和推理任务，Claude Opus 4.6 提供成本与能力的平衡。
+- Claude Sonnet 4.6 适合作为通用主力模型，Claude Opus 4.8（当前最强，2026-05 发布；上一代为 Opus 4.7）适合极度复杂的软件工程和推理任务，Claude Opus 4.6 提供成本与能力的平衡。
 - Prompt Caching、Batch API、Claude Code、MCP 等能力共同强化了工程落地与成本控制路径。
 
 #### 三层+旗舰模型梯队
@@ -17,7 +17,7 @@
 |-----|------|------|--------|
 | Claude Haiku 4.5 | 轻量快速 | $1.00/$5.00 | 实时、大量 |
 | Claude Sonnet 4.6 | 通用主力 | $3.00/$15.00 | 通用、平衡 |
-| Claude Opus 4.7 | 最高质量、当前SOTA | $5.00/$25.00 | 极高难度工程、深层推理 |
+| Claude Opus 4.8 | 最高质量、当前SOTA | $5.00/$25.00 | 极高难度工程、深层推理 |
 
 #### Claude 5 的观察框架
 
