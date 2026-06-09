@@ -14,7 +14,8 @@
 
 *   一个 Skill 就是一个文件夹。
 *   **`SKILL.md`**：核心文件，通过 YAML Frontmatter 定义元数据和触发词，正文定义角色和流程。
-*   **`docs/`**：外挂知识库 (RAG)。
+*   **`resources/`**：外挂参考资料与知识文件。
+*   **`scripts/`**：可执行脚本。
 *   **`examples/`**：Few-Shot 样本。
 
 #### 多层级应用
