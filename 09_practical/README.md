@@ -22,4 +22,4 @@
 | [9.1](9.1_customer_service.md) | 智能客服系统 |
 | [9.2](9.2_doc_processing.md) | 文档处理与知识库 |
 | [9.3](9.3_data_analysis.md) | 数据分析助手 |
-| [9.4](9.4_qa_test.md) | 自动化测试与 QA |
+| [9.4](9.4_qa_test.md) | 自动化研发流水线与 QA |
