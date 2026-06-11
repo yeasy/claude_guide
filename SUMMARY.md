@@ -16,7 +16,7 @@
   * [2.2 使用 XML 标签结构化指令](02_prompt/2.2_xml.md)
   * [2.3 系统提示词设计：AI 的“出厂设置”](02_prompt/2.3_system_prompt.md)
   * [2.4 少样本学习：AI 的“举一反三”](02_prompt/2.4_few_shot.md)
-  * [2.5 链式思维与逐步推理](02_prompt/2.5_cot.md)
+  * [2.5 思维链与逐步推理](02_prompt/2.5_cot.md)
   * [2.6 输出格式控制：让 Claude 乖乖听话](02_prompt/2.6_format.md)
   * [2.7 提示词优化与调试：工程学视角](02_prompt/2.7_optimization.md)
   * [本章小结：掌握 AI 的语言艺术](02_prompt/summary.md)
