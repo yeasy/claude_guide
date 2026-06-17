@@ -19,7 +19,7 @@
 #### 数据隐私
 
 *   **API != Training**: 商业 API 数据不用于训练。
-*   **Zero Retention**: 对于极致安全需求，可以使用零留存模式。
+*   **Zero Retention**: 对于极致安全需求，可以使用零留存模式，但要逐功能、逐模型核对覆盖范围。
 *   **Local Anonymization**: 在数据出门前就把它变成乱码。
 
 #### 负责任的 AI

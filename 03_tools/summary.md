@@ -20,7 +20,7 @@
 我们深入剖析了 Agent 运行的生命周期：
 1.  **Stop Reason**: 识别 `tool_use` 信号。
 2.  **Execution**: 并行或串行执行业务逻辑。
-3.  **Result**: 构造包含 Text 或 Image 的 `tool_result`。
+3.  **Result**: 构造包含 Text、Image 或 Document 的 `tool_result`。
 4.  **History**: 维护完整的对话链条是成功的关键。
 
 #### 复杂编排

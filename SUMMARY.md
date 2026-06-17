@@ -63,7 +63,7 @@
 * [第七章 Agentic Coding 与 Claude Code](07_coding/README.md)
   * [7.1 Claude 作为编程助手](07_coding/7.1_assistant.md)
   * [7.2 Claude Code CLI 入门与基础运维](07_coding/7.2_cli.md)
-  * [7.3 Claude Code SDK 集成](07_coding/7.3_sdk.md)
+  * [7.3 Agent SDK 集成](07_coding/7.3_sdk.md)
   * [7.4 IDE 集成与工作流](07_coding/7.4_ide.md)
   * [7.5 自主编码实践与案例](07_coding/7.5_practical.md)
   * [7.6 Claude Code 高阶特性与多端生态](07_coding/7.6_advanced.md)

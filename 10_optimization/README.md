@@ -12,7 +12,7 @@ graph TD
 
     C["💰 Cost Optimization<br/>Strategies"]:::center
     C --> T["1⃣ Token Pricing<br/>Input/Output<br/>per-token billing"]:::s1
-    C --> P["2⃣ Prompt Caching<br/>Cache static context<br/>90% cost reduction"]:::s2
+    C --> P["2⃣ Prompt Caching<br/>Cache static context<br/>Lower repeated-input cost"]:::s2
     C --> W["3⃣ Context Window<br/>Manage token budget<br/>Summarize + Trim"]:::s3
     C --> M["4⃣ Model Selection<br/>Haiku < Sonnet < Opus<br/>Right model for task"]:::s4
 ```

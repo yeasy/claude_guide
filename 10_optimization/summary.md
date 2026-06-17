@@ -15,12 +15,12 @@
 #### Prompt Caching：缓存
 
 *   这是长文本应用（Long Context App）的救星。
-*   通过识别重复前缀（Prefix），它可以让 API 成本直降 90%，延迟直降 80%。
-*   **最佳实践**: 总是把 System Prompt 和大段背景资料放在最前面。
+*   通过识别重复前缀（Prefix），它可以显著降低重复输入成本和首 token 延迟；实际幅度取决于缓存命中率、TTL、模型和输出占比。
+*   **最佳实践**: 把稳定的 System Prompt、工具定义和大段背景资料放在动态用户输入之前。
 
 #### Context Management：上下文
 
-*   200k 很大，但也很贵。
+*   200K/1M 上下文很大，但也很贵。
 *   **Sliding Window**: 最简单，丢弃旧对话。
 *   **Summarization**: 最智能，总结旧对话。
 *   **Distillation**: 最极客，只提取状态。
