@@ -21,6 +21,8 @@ jobs:
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
+      - name: Install exact example dependencies
+        run: python3 -m pip install --disable-pip-version-check -r examples/requirements.txt
       - name: Run offline tests and book checks
         run: |
           python3 -m unittest discover -s tests -p 'test_*.py' -v

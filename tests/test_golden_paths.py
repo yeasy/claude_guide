@@ -4,7 +4,17 @@ import asyncio
 import importlib.util
 import sys
 import unittest
+from importlib.metadata import version
 from pathlib import Path
+
+from anthropic.types import (
+    Message,
+    TextBlock as AnthropicTextBlock,
+    ThinkingBlock,
+    ToolUseBlock,
+    Usage,
+)
+from claude_agent_sdk import AssistantMessage, ResultMessage, TextBlock as AgentTextBlock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,19 +32,32 @@ def load(name: str):
     return module
 
 
+def api_message(*, content, stop_reason: str) -> Message:
+    return Message(
+        id="msg_test",
+        content=content,
+        model="claude-sonnet-5",
+        role="assistant",
+        stop_reason=stop_reason,
+        stop_sequence=None,
+        type="message",
+        usage=Usage(input_tokens=1, output_tokens=1),
+    )
+
+
 class GoldenPathTests(unittest.TestCase):
     def test_messages_request_schema_and_refusal_handling(self):
         module = load("messages_api")
         calls = []
+        response = api_message(
+            content=[AnthropicTextBlock(type="text", text="你好", citations=None)],
+            stop_reason="end_turn",
+        )
+        self.assertIsInstance(response, Message)
 
         def fake_create(**request):
             calls.append(request)
-            return {
-                "type": "message",
-                "role": "assistant",
-                "content": [{"type": "text", "text": "你好"}],
-                "stop_reason": "end_turn",
-            }
+            return response
 
         result = module.send_message("你好", create=fake_create)
         self.assertEqual(result, "你好")
@@ -49,8 +72,11 @@ class GoldenPathTests(unittest.TestCase):
             ],
         )
 
+        refusal = api_message(content=[], stop_reason="refusal")
+        self.assertIsInstance(refusal, Message)
+
         def refused(**_request):
-            return {"content": [], "stop_reason": "refusal"}
+            return refusal
 
         with self.assertRaises(module.ClaudeRefusalError):
             module.send_message("unsafe", create=refused)
@@ -59,33 +85,27 @@ class GoldenPathTests(unittest.TestCase):
         module = load("tool_use_loop")
         calls = []
 
-        class ThinkingBlock:
-            type = "thinking"
-
-            @staticmethod
-            def model_dump(**_kwargs):
-                return {"type": "thinking", "thinking": "plan", "signature": "sig"}
-
-        responses = iter(
-            (
-                {
-                    "content": [
-                        ThinkingBlock(),
-                        {
-                            "type": "tool_use",
-                            "id": "toolu_weather_1",
-                            "name": "weather",
-                            "input": {"city": "Paris"},
-                        }
-                    ],
-                    "stop_reason": "tool_use",
-                },
-                {
-                    "content": [{"type": "text", "text": "Paris: 21 C"}],
-                    "stop_reason": "end_turn",
-                },
-            )
+        response_values = (
+            api_message(
+                content=[
+                    ThinkingBlock(type="thinking", thinking="plan", signature="sig"),
+                    ToolUseBlock(
+                        type="tool_use",
+                        id="toolu_weather_1",
+                        name="weather",
+                        input={"city": "Paris"},
+                        caller=None,
+                    ),
+                ],
+                stop_reason="tool_use",
+            ),
+            api_message(
+                content=[AnthropicTextBlock(type="text", text="Paris: 21 C", citations=None)],
+                stop_reason="end_turn",
+            ),
         )
+        self.assertTrue(all(isinstance(response, Message) for response in response_values))
+        responses = iter(response_values)
 
         def fake_create(**request):
             calls.append(request)
@@ -111,26 +131,43 @@ class GoldenPathTests(unittest.TestCase):
 
     def test_agent_sdk_success_and_error_events_without_network(self):
         module = load("agent_sdk_minimal")
+        success_events = (
+            AssistantMessage(content=[AgentTextBlock(text="working")], model="claude-sonnet-5"),
+            ResultMessage(
+                subtype="success",
+                duration_ms=1,
+                duration_api_ms=1,
+                is_error=False,
+                num_turns=1,
+                session_id="session_test",
+                result="done",
+            ),
+        )
+        self.assertIsInstance(success_events[0], AssistantMessage)
+        self.assertIsInstance(success_events[1], ResultMessage)
 
         async def successful_events(_prompt):
-            for event in (
-                {"type": "assistant", "content": [{"type": "text", "text": "working"}]},
-                {"type": "result", "subtype": "success", "result": "done"},
-            ):
+            for event in success_events:
                 yield event
 
         result = asyncio.run(module.run_agent("task", event_source=successful_events))
         self.assertEqual(result.result, "done")
         self.assertEqual(result.assistant_messages, ("working",))
 
+        failure = ResultMessage(
+            subtype="error_during_execution",
+            duration_ms=1,
+            duration_api_ms=1,
+            is_error=True,
+            num_turns=1,
+            session_id="session_test",
+            result=None,
+            errors=["tool failed"],
+        )
+        self.assertIsInstance(failure, ResultMessage)
+
         async def failing_events(_prompt):
-            yield {
-                "type": "result",
-                "subtype": "error_during_execution",
-                "is_error": True,
-                "result": None,
-                "errors": ["tool failed"],
-            }
+            yield failure
 
         with self.assertRaisesRegex(module.AgentRunError, "tool failed"):
             asyncio.run(module.run_agent("task", event_source=failing_events))
@@ -141,6 +178,8 @@ class GoldenPathTests(unittest.TestCase):
             requirements.splitlines(),
             ["anthropic==0.116.0", "claude-agent-sdk==0.2.115"],
         )
+        self.assertEqual(version("anthropic"), "0.116.0")
+        self.assertEqual(version("claude-agent-sdk"), "0.2.115")
         routes = {
             "12_appendix/12.1_api_ref.md": ("messages_api.py",),
             "03_tools/3.3_results.md": ("tool_use_loop.py",),

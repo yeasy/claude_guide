@@ -115,6 +115,40 @@ class VolatileFactsTests(unittest.TestCase):
             for marker in markers:
                 self.assertIn(marker, text, relative)
 
+    def test_current_selection_guidance_routes_new_projects_to_sonnet_5(self):
+        intro = (ROOT / "01_intro" / "1.4_model_selection.md").read_text(encoding="utf-8")
+        for marker in (
+            "新项目首评：Claude Sonnet 5",
+            "既有 Sonnet 4.6",
+            "2026-08-31",
+            "约增加 30% token",
+            '| **Claude Sonnet 5** | ~$3.6 |',
+            'MODEL_BALANCED = "claude-sonnet-5"',
+        ):
+            self.assertIn(marker, intro)
+        for stale in (
+            "默认首选：Claude Sonnet 4.6",
+            'MODEL_BALANCED = "claude-sonnet-4-6"',
+        ):
+            self.assertNotIn(stale, intro)
+
+        comparison = (ROOT / "12_appendix" / "12.6_model_comparison.md").read_text(encoding="utf-8")
+        for marker in (
+            "新项目先评测 Claude Sonnet 5",
+            "既有 Sonnet 4.6 系统按迁移清单灰度升级",
+            "推荐：**Claude Sonnet 5**",
+            'model="claude-sonnet-5"',
+            "历史快照严格 2D Pareto 前沿",
+        ):
+            self.assertIn(marker, comparison)
+        for stale in (
+            "推荐：**Claude Sonnet 4.6**",
+            'model="claude-sonnet-4-6"',
+            "推荐: Claude Sonnet 4.6",
+            "推荐: Sonnet 4.6 + 少量 Opus 4.8",
+        ):
+            self.assertNotIn(stale, comparison)
+
 
 if __name__ == "__main__":
     unittest.main()

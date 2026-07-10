@@ -8,6 +8,9 @@ from unittest import mock
 from tools import verify_artifacts as verifier
 
 
+ROOT = Path(__file__).resolve().parents[1]
+
+
 class ArtifactVerifierTests(unittest.TestCase):
     def test_html_title_inline_mermaid_and_published_count(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -31,6 +34,13 @@ class ArtifactVerifierTests(unittest.TestCase):
             verifier.write_checksums([pdf, html], manifest); verifier.verify_checksums(manifest)
             html.write_text("changed")
             with self.assertRaises(verifier.ArtifactVerificationError): verifier.verify_checksums(manifest)
+
+    def test_summary_appendix_titles_match_source_headings(self):
+        summary = (ROOT / "SUMMARY.md").read_text(encoding="utf-8")
+        for relative in ("12_appendix/README.md", "12_appendix/12.6_model_comparison.md"):
+            source = (ROOT / relative).read_text(encoding="utf-8")
+            heading = next(line.lstrip("# ") for line in source.splitlines() if line.startswith("#"))
+            self.assertIn(f"[{heading}]({relative})", summary, relative)
 
 
 if __name__ == "__main__":

@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOWS = ROOT / ".github" / "workflows"
 EXPECTED = ("ci.yaml", "preview-pdf.yml", "auto-release.yml", "dependabot-automerge.yml")
+PUBLICATION_WORKFLOWS = ("ci.yaml", "preview-pdf.yml", "auto-release.yml")
 FULL_SHA = re.compile(r"^[^@\s]+@[0-9a-f]{40}$")
 REPOSITORY = "owner/repo"
 SHA = "a" * 40
@@ -82,6 +83,14 @@ def step_script(text: str, name: str) -> str:
     return textwrap.dedent(text[run : end if end >= 0 else len(text)])
 
 
+def job_text(text: str, name: str) -> str:
+    marker = f"  {name}:\n"
+    start = text.index(marker) + len(marker)
+    next_job = re.search(r"(?m)^  [A-Za-z0-9_-]+:\n", text[start:])
+    end = start + next_job.start() if next_job else len(text)
+    return text[start:end]
+
+
 class WorkflowSafetyTests(unittest.TestCase):
     def text(self, name: str) -> str:
         return (WORKFLOWS / name).read_text(encoding="utf-8")
@@ -122,6 +131,17 @@ class WorkflowSafetyTests(unittest.TestCase):
         self.assertRegex(auto, r"(?s)subject-path:.*?\.pdf.*?\.html.*?SHA256SUMS")
         self.assertRegex(auto, r"(?s)files:.*?\.pdf.*?\.html.*?SHA256SUMS")
         self.assertIn("fail_on_unmatched_files: true", auto)
+
+    def test_exact_example_dependencies_are_installed_in_read_only_build_jobs(self):
+        install = "python3 -m pip install --disable-pip-version-check -r examples/requirements.txt"
+        tests = "python3 -m unittest discover -s tests -p 'test_*.py' -v"
+        for name in PUBLICATION_WORKFLOWS:
+            text = self.text(name)
+            build = job_text(text, "build")
+            self.assertIn("permissions:\n      contents: read", build, name)
+            self.assertIn(install, build, name)
+            self.assertLess(build.index(install), build.index(tests), name)
+            self.assertEqual(text.count(install), 1, name)
 
     def test_mermaid_lock_is_exact(self):
         package = json.loads((ROOT / "tools/mermaid/package.json").read_text())
