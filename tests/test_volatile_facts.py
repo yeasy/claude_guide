@@ -65,7 +65,9 @@ class VolatileFactsTests(unittest.TestCase):
             "status=resolved-conflict",
             "`claude-sonnet-5`",
             "Fable 5 已于 2026-07-01 恢复全球访问",
-            "Mythos 5 仅恢复给部分美国机构",
+            "Mythos 5 非普遍可用",
+            "Project Glasswing 获批客户",
+            "无自助注册",
             "$2 / $10",
             "adaptive thinking 默认开启",
             "`stop_reason: \"refusal\"`",
@@ -76,6 +78,40 @@ class VolatileFactsTests(unittest.TestCase):
         for marker in required:
             self.assertIn(marker, text)
         self.assertEqual(rules.check_volatile_facts(LEDGER, date(2026, 7, 10)), [])
+
+    def test_current_mythos_guidance_uses_catalog_contract_not_event_geography(self):
+        current_snapshots = (
+            "01_intro/1.2_model_family.md",
+            "03_tools/3.5_programmatic.md",
+            "12_appendix/12.6_model_comparison.md",
+            "12_appendix/12.7_volatile_facts.md",
+            "13_advanced/README.md",
+        )
+        for relative in current_snapshots:
+            with self.subTest(path=relative):
+                text = (ROOT / relative).read_text(encoding="utf-8")
+                for marker in ("非普遍可用", "Project Glasswing", "获批客户"):
+                    self.assertIn(marker, text, relative)
+                self.assertNotIn("部分美国机构", text, relative)
+
+        ledger = LEDGER.read_text(encoding="utf-8")
+        self.assertIn("无自助注册", ledger)
+
+    def test_historical_timeline_retains_july_1_us_organization_event(self):
+        historical_snapshots = {
+            "01_intro/1.1_born.md": 1,
+            "12_appendix/12.3_glossary.md": 1,
+            "13_advanced/13.1_claude5_preview.md": 2,
+        }
+        for relative, minimum_occurrences in historical_snapshots.items():
+            with self.subTest(path=relative):
+                text = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertIn("2026-07-01", text, relative)
+                self.assertGreaterEqual(
+                    text.count("当时恢复给一组美国机构"),
+                    minimum_occurrences,
+                    relative,
+                )
 
     def test_main_checker_enforces_volatile_facts(self):
         source = (ROOT / "check_project_rules.py").read_text(encoding="utf-8")
@@ -148,6 +184,32 @@ class VolatileFactsTests(unittest.TestCase):
             "推荐: Sonnet 4.6 + 少量 Opus 4.8",
         ):
             self.assertNotIn(stale, comparison)
+
+
+class Sonnet46UsageContractTests(unittest.TestCase):
+    def test_unmarked_active_sonnet_46_example_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "active.md").write_text(
+                'response = client.messages.create(model="claude-sonnet-4-6")\n',
+                encoding="utf-8",
+            )
+            issues = rules.check_sonnet_46_usage(root=root, allowlist={})
+            self.assertEqual(
+                issues,
+                ["active.md:1: Sonnet 4.6 use is not explicitly allowlisted"],
+            )
+
+    def test_repository_contains_only_reasoned_sonnet_46_uses(self):
+        self.assertEqual(rules.check_sonnet_46_usage(), [])
+        self.assertTrue(rules.SONNET_46_ALLOWLIST)
+        for (relative, line_no), reason in rules.SONNET_46_ALLOWLIST.items():
+            with self.subTest(path=relative, line=line_no):
+                self.assertTrue(reason.strip())
+
+    def test_main_checker_enforces_sonnet_46_usage_contract(self):
+        source = (ROOT / "check_project_rules.py").read_text(encoding="utf-8")
+        self.assertIn("issues.extend(check_sonnet_46_usage())", source)
 
 
 if __name__ == "__main__":
