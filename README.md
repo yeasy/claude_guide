@@ -33,6 +33,24 @@
 
 本书围绕新一代 Claude Fable 5 与 Opus、Sonnet、Haiku 各系列的核心能力展开。模型 ID、价格、上下文窗口和弃用状态变化很快，生产选型请以官方模型页和价格页为准。
 
+### 可执行黄金路径
+
+仓库提供三条可离线测试、真实运行时再读取凭据的最小路径：
+
+- [Messages API 最小调用](examples/messages_api.py)
+- [完整客户端工具循环](examples/tool_use_loop.py)
+- [Agent SDK 成功/失败事件处理](examples/agent_sdk_minimal.py)
+
+依赖版本锁定在 [`examples/requirements.txt`](examples/requirements.txt)。测试不读取 API key、不访问网络：
+
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+python3 -m pip install -r examples/requirements.txt
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+真实运行 `messages_api.py` 前按 Anthropic SDK 文档配置 `ANTHROPIC_API_KEY`；Agent SDK 示例使用该 SDK 支持的 Claude Code / API 凭据机制。不要把凭据写入仓库。
+
 ---
 
 ## 目标读者

@@ -1,76 +1,157 @@
 #!/usr/bin/env python3
-"""Render all Mermaid diagrams in a GitBook-style book to SVG (for the mobile reader).
+"""Render every published Mermaid block to SVG; strict and source-safe by default."""
 
-Extracts ```mermaid blocks in SUMMARY.md order and renders them with mermaid-cli,
-pointing puppeteer at a system Chrome (CHROME_BIN env or auto-detected). Chunked +
-retried because a single large mmdc pass can crash headless Chrome. Diagrams that
-still fail are simply left out — build_mobile_book.py shows their source as fallback.
-Writes d-1.svg .. d-N.svg into --svg-out. Exits 0 even if some/all fail (non-fatal).
-"""
-import os, re, sys, glob, time, shutil, subprocess, argparse
+from __future__ import annotations
 
-ap = argparse.ArgumentParser()
-ap.add_argument("--book-dir", default=".")
-ap.add_argument("--svg-out", required=True)
-ap.add_argument("--chunk", type=int, default=25)
-a = ap.parse_args()
-BOOK, SVG = os.path.abspath(a.book_dir), os.path.abspath(a.svg_out)
-shutil.rmtree(SVG, ignore_errors=True); os.makedirs(SVG)
+import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+from pathlib import Path
 
-# extract mermaid sources in SUMMARY order (same order build_mobile_book.py uses)
-srcs, seen = [], set()
-sm = os.path.join(BOOK, "SUMMARY.md")
-order = []
-for line in open(sm, encoding="utf-8"):
-    m = re.match(r'^\s*[-*]\s+\[.*?\]\(([^)]+?)\)', line)
-    if m and m.group(1).endswith(".md"):
-        p = m.group(1).strip()
-        if p not in seen and os.path.isfile(os.path.join(BOOK, p)):
-            seen.add(p); order.append(p)
-for p in order:
-    txt = open(os.path.join(BOOK, p), encoding="utf-8").read()
-    for mm in re.finditer(r'```mermaid[ \t]*\n(.*?)\n[ \t]*```', txt, re.DOTALL):
-        srcs.append(mm.group(1))
-N = len(srcs)
-print(f"mermaid diagrams found: {N}")
-if N == 0:
-    sys.exit(0)
 
-chrome = os.environ.get("CHROME_BIN") or next(
-    (shutil.which(n) for n in ["google-chrome-stable","google-chrome","chromium-browser","chromium","chrome"] if shutil.which(n)), None)
-if not chrome:
-    print("WARNING: no Chrome found -> all diagrams will fall back to source"); sys.exit(0)
-print(f"using Chrome: {chrome}")
-pptr = os.path.join(SVG, "_pptr.json")
-open(pptr, "w").write('{"executablePath":"%s","args":["--no-sandbox","--disable-gpu","--disable-dev-shm-usage"]}' % chrome)
-rc = os.path.join(SVG, "_rc.json"); open(rc, "w").write('{"theme":"default"}')
-MMDC = shutil.which("mmdc") or "mmdc"
+STANDARD_CHROME_PATHS = (
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+)
+SAFETY_MESSAGE = "must be an independent directory outside protected source trees"
 
-def render(indices):
-    cm = os.path.join(SVG, "_chunk.md")
-    open(cm, "w", encoding="utf-8").write("\n".join("```mermaid\n"+srcs[i]+"\n```\n" for i in indices))
-    subprocess.run(["pkill", "-f", "enable-automation"], capture_output=True)  # only puppeteer Chrome
-    time.sleep(1)
-    subprocess.run([MMDC, "-i", cm, "-o", os.path.join(SVG, "_c.svg"), "-p", pptr, "-c", rc, "-b", "transparent"],
-                   capture_output=True, text=True)
-    for j, i in enumerate(indices, 1):
-        sp = os.path.join(SVG, f"_c-{j}.svg")
-        if os.path.isfile(sp) and os.path.getsize(sp) > 0:
-            os.replace(sp, os.path.join(SVG, f"d-{i+1}.svg"))
-    for st in glob.glob(os.path.join(SVG, "_c-*.svg")): os.remove(st)
 
-def done(): return len([i for i in range(N) if os.path.isfile(os.path.join(SVG, f"d-{i+1}.svg"))])
+def paths_overlap(left: Path, right: Path) -> bool:
+    return left == right or left in right.parents or right in left.parents
 
-for c in range((N + a.chunk - 1) // a.chunk):
-    s, e = c*a.chunk, min(c*a.chunk + a.chunk, N)
-    render(list(range(s, e)))
-    print(f"  chunk {c+1}: {done()}/{N}", flush=True)
-for att in range(4):
-    miss = [i for i in range(N) if not os.path.isfile(os.path.join(SVG, f"d-{i+1}.svg"))]
-    if not miss: break
-    print(f"  retry {att+1}: {len(miss)} missing", flush=True)
-    for b in range(0, len(miss), 8): render(miss[b:b+8])
 
-for f in glob.glob(os.path.join(SVG, "*.json")) + glob.glob(os.path.join(SVG, "_chunk.md")):
-    os.remove(f)
-print(f"RENDERED {done()}/{N} diagrams")
+def validate_output_directory(book_dir: str, svg_out: str) -> tuple[Path, Path]:
+    book = Path(book_dir).expanduser().resolve()
+    output = Path(svg_out).expanduser().resolve()
+    repository = Path(__file__).resolve().parents[1]
+    if (
+        output in {Path(output.anchor).resolve(), Path.home().resolve(), Path.cwd().resolve()}
+        or paths_overlap(output, book)
+        or paths_overlap(output, repository)
+    ):
+        raise ValueError(f"--svg-out {output} {SAFETY_MESSAGE}")
+    return book, output
+
+
+def clean_generated_files(output: Path) -> None:
+    generated = re.compile(r"^(?:d-\d+|_c(?:-\d+)?)\.svg$")
+    for entry in output.iterdir():
+        if entry.name in {"_chunk.md", "_pptr.json", "_rc.json"} or generated.fullmatch(entry.name):
+            if entry.is_file() or entry.is_symlink():
+                entry.unlink()
+
+
+def find_chrome() -> str | None:
+    configured = os.environ.get("CHROME_BIN")
+    candidates = [configured] if configured else [
+        *(shutil.which(name) for name in ("google-chrome-stable", "google-chrome", "chromium-browser", "chromium", "chrome")),
+        *STANDARD_CHROME_PATHS,
+    ]
+    return next((str(Path(path).resolve()) for path in candidates if path and Path(path).is_file()), None)
+
+
+def published_sources(book: Path) -> list[str]:
+    order: list[Path] = []
+    seen: set[Path] = set()
+    for line in (book / "SUMMARY.md").read_text(encoding="utf-8").splitlines():
+        match = re.match(r"^\s*[-*]\s+\[.*?\]\(([^)]+?)\)", line)
+        if not match:
+            continue
+        relative = match.group(1).split("#", 1)[0].strip()
+        path = (book / relative).resolve()
+        if relative.endswith(".md") and path.is_file() and path not in seen:
+            if book not in path.parents:
+                raise ValueError(f"SUMMARY entry escapes book directory: {relative}")
+            seen.add(path)
+            order.append(path)
+    sources: list[str] = []
+    for path in order:
+        text = path.read_text(encoding="utf-8")
+        sources.extend(re.findall(r"```mermaid[ \t]*\n(.*?)\n[ \t]*```", text, re.DOTALL))
+    return sources
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--book-dir", default=".")
+    parser.add_argument("--svg-out", required=True)
+    parser.add_argument("--chunk", type=int, default=25)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--strict", dest="strict", action="store_true", default=True)
+    mode.add_argument("--allow-fallback", dest="strict", action="store_false")
+    args = parser.parse_args()
+    if args.chunk <= 0:
+        parser.error("--chunk must be positive")
+    try:
+        book, output = validate_output_directory(args.book_dir, args.svg_out)
+        sources = published_sources(book)
+    except (OSError, ValueError) as error:
+        print(f"Mermaid rendering failed: {error}", file=sys.stderr)
+        return 2
+    output.mkdir(parents=True, exist_ok=True)
+    clean_generated_files(output)
+    count = len(sources)
+    print(f"mermaid diagrams found: {count}")
+    if count == 0:
+        return 0
+
+    chrome = find_chrome()
+    mmdc = shutil.which("mmdc")
+    missing_tool = "no Chrome executable found" if not chrome else "mmdc is not on PATH" if not mmdc else None
+    if missing_tool:
+        if args.strict:
+            print(f"Mermaid rendering failed: {missing_tool}", file=sys.stderr)
+            return 1
+        print(f"WARNING: {missing_tool} -> diagrams fall back to source")
+        return 0
+
+    print(f"using Chrome: {chrome}")
+    pptr, config = output / "_pptr.json", output / "_rc.json"
+    pptr.write_text(json.dumps({"executablePath": chrome, "args": ["--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage"]}), encoding="utf-8")
+    config.write_text(json.dumps({"theme": "default"}), encoding="utf-8")
+
+    def done() -> int:
+        return sum((output / f"d-{index + 1}.svg").is_file() for index in range(count))
+
+    def render(indices: list[int]) -> None:
+        chunk_file = output / "_chunk.md"
+        chunk_file.write_text("\n".join(f"```mermaid\n{sources[index]}\n```\n" for index in indices), encoding="utf-8")
+        for stale in output.glob("_c*.svg"):
+            stale.unlink()
+        result = subprocess.run([mmdc, "-i", str(chunk_file), "-o", str(output / "_c.svg"), "-p", str(pptr), "-c", str(config), "-b", "transparent"], capture_output=True, text=True, check=False)
+        if result.returncode:
+            print((result.stderr or result.stdout).strip(), file=sys.stderr)
+        for position, index in enumerate(indices, 1):
+            source = output / f"_c-{position}.svg"
+            if len(indices) == 1 and not source.is_file():
+                source = output / "_c.svg"
+            if source.is_file() and source.stat().st_size:
+                source.replace(output / f"d-{index + 1}.svg")
+        for stale in output.glob("_c*.svg"):
+            stale.unlink()
+
+    for start in range(0, count, args.chunk):
+        render(list(range(start, min(start + args.chunk, count))))
+        print(f"  rendered: {done()}/{count}", flush=True)
+    for _ in range(4):
+        missing = [index for index in range(count) if not (output / f"d-{index + 1}.svg").is_file()]
+        if not missing:
+            break
+        for start in range(0, len(missing), 8):
+            render(missing[start : start + 8])
+    for temporary in (pptr, config, output / "_chunk.md"):
+        temporary.unlink(missing_ok=True)
+    missing = [index + 1 for index in range(count) if not (output / f"d-{index + 1}.svg").is_file()]
+    print(f"RENDERED {done()}/{count} diagrams")
+    if args.strict and missing:
+        print(f"Mermaid rendering failed for diagrams: {missing}", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

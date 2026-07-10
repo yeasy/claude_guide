@@ -1,0 +1,7 @@
+{
+  "name": "claude-guide-publication-tools",
+  "private": true,
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "10.9.1"
+  }
+}
