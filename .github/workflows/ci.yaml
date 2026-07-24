@@ -24,7 +24,7 @@ jobs:
       - name: Run offline tests and book checks
         run: |
           python3 -m unittest discover -s tests -p 'test_*.py' -v
-          python3 check_project_rules.py
+          python3 check_project_rules.py && python3 check_emphasis.py
       - name: Set up Chrome
         id: setupchrome
         uses: browser-actions/setup-chrome@2e1d749697dd1612b833dba4a722266286fbefcd # v2.1.2
