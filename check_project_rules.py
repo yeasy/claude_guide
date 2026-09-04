@@ -72,13 +72,18 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (75, 105, 107, 109, 117, 183),
+        (75, 105, 107, 109, 117, 184),
         "Historical model-family evolution and the 4.5-to-4.6 comparison.",
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (95, 161),
+        (95, 162),
         "Sonnet 5 migration target and legacy thinking compatibility reference.",
+    ),
+    **_sonnet_46_entries(
+        "10_optimization/10.2_caching.md",
+        (539,),
+        "Worked example still priced at the Sonnet 4.6 cache-read rate; the line names the Sonnet 5 rate alongside it.",
     ),
     **_sonnet_46_entries(
         "01_intro/1.3_capabilities.md",
