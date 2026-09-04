@@ -174,7 +174,7 @@ RAG（检索增强生成）是上下文工程的实践工具：
 | Claude Sonnet 4.6（兼容性基线） | $3.00/M | $15.00/M | $3.75/M | $0.30/M |
 | Claude Opus 5 | $5.00/M | $25.00/M | $6.25/M | $0.50/M |
 
-> 注：Opus 5（2026-07-24 发布）为当前 Opus 线型号，Opus 4.8/4.7/4.6 已转入官方 Legacy models 分组。Fable 5 已恢复全球访问；Sonnet 5 是 Sonnet 4.6 的迁移目标和新项目默认评测起点。Sonnet 5 的 $2/$10 已是标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
+> 注：Opus 5（2026-07-24 发布）为当前 Opus 线型号，Opus 4.8/4.7/4.6 已转入官方 Legacy models 分组。Fable 5 已恢复全球访问，并于 2026-09-01 由 Fable 5.1 接替、转入 Legacy；Sonnet 5 是 Sonnet 4.6 的迁移目标和新项目默认评测起点。Sonnet 5 的 $2/$10 已是标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
 
 ### 长对话管理成本对比
 
@@ -270,7 +270,7 @@ RAG（检索增强生成）是上下文工程的实践工具：
 
 ### 官方资源
 
-- [Anthropic 技术博客](https://www.anthropic.com/blog)
+- [Anthropic 技术博客](https://www.anthropic.com/news)
 - [Claude API 文档](https://platform.claude.com/docs)
 - [MCP 规范](https://modelcontextprotocol.io)
 
