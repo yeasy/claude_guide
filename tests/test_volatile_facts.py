@@ -71,6 +71,9 @@ class VolatileFactsTests(unittest.TestCase):
             "status=resolved-conflict",
             "`claude-opus-5`",
             "`claude-sonnet-5`",
+            "`claude-opus-5-5`",
+            "`claude-sonnet-5-5`",
+            "`claude-fable-5-1`",
             "thinking 默认开启",
             "Legacy models",
             "Fable 5 已于 2026-07-01 恢复全球访问",
@@ -164,35 +167,40 @@ class VolatileFactsTests(unittest.TestCase):
             for marker in markers:
                 self.assertIn(marker, text, relative)
 
-    def test_current_selection_guidance_routes_new_projects_to_sonnet_5(self):
+    def test_current_selection_guidance_routes_new_projects_to_sonnet_5_5(self):
         intro = (ROOT / "01_intro" / "1.4_model_selection.md").read_text(encoding="utf-8")
         for marker in (
-            "新项目首评：Claude Sonnet 5",
+            "新项目首评：Claude Sonnet 5.5",
             "既有 Sonnet 4.6",
             "官方已取消原定 2026-09-01 上调至 $3/$15 的计划",
             "约增加 30% token",
-            '| **Claude Sonnet 5** | ~$3.6 |',
-            'MODEL_BALANCED = "claude-sonnet-5"',
+            '| **Claude Sonnet 5.5** | ~$3.6 |',
+            'MODEL_BALANCED = "claude-sonnet-5-5"',
+            'MODEL_SOTA = "claude-opus-5-5"',
         ):
             self.assertIn(marker, intro)
         for stale in (
             "默认首选：Claude Sonnet 4.6",
             'MODEL_BALANCED = "claude-sonnet-4-6"',
+            'MODEL_BALANCED = "claude-sonnet-5"',
+            'MODEL_FABLE = "claude-fable-5"',
         ):
             self.assertNotIn(stale, intro)
 
         comparison = (ROOT / "12_appendix" / "12.6_model_comparison.md").read_text(encoding="utf-8")
         for marker in (
-            "新项目先评测 Claude Sonnet 5",
+            "新项目先评测 Claude Sonnet 5.5",
             "既有 Sonnet 4.6 系统按迁移清单灰度升级",
-            "推荐：**Claude Sonnet 5**",
-            'model="claude-sonnet-5"',
+            "推荐：**Claude Sonnet 5.5**",
+            'model="claude-sonnet-5-5"',
             "历史快照严格 2D Pareto 前沿",
         ):
             self.assertIn(marker, comparison)
         for stale in (
             "推荐：**Claude Sonnet 4.6**",
             'model="claude-sonnet-4-6"',
+            '推荐：**Claude Sonnet 5**',
+            'model="claude-sonnet-5"',
             "推荐: Claude Sonnet 4.6",
             "推荐: Sonnet 4.6 + 少量 Opus 4.8",
         ):
