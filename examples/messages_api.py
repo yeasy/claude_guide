@@ -6,7 +6,7 @@ from collections.abc import Callable, Mapping
 from typing import Any
 
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"
 
 
 class ClaudeRefusalError(RuntimeError):

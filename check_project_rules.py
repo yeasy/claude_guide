@@ -192,7 +192,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.1_claude5_preview.md",
-        (17, 56, 59, 61, 63, 73, 98),
+        (17, 59, 62, 64, 20, 76, 101),
         "Explicit Sonnet 5 migration checklist and legacy compatibility reference.",
     ),
     **_sonnet_46_entries(

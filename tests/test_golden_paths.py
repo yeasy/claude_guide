@@ -36,7 +36,7 @@ def api_message(*, content, stop_reason: str) -> Message:
     return Message(
         id="msg_test",
         content=content,
-        model="claude-sonnet-5",
+        model="claude-sonnet-5-5",
         role="assistant",
         stop_reason=stop_reason,
         stop_sequence=None,
@@ -65,7 +65,7 @@ class GoldenPathTests(unittest.TestCase):
             calls,
             [
                 {
-                    "model": "claude-sonnet-5",
+                    "model": "claude-sonnet-5-5",
                     "max_tokens": 1024,
                     "messages": [{"role": "user", "content": "你好"}],
                 }
@@ -132,7 +132,7 @@ class GoldenPathTests(unittest.TestCase):
     def test_agent_sdk_success_and_error_events_without_network(self):
         module = load("agent_sdk_minimal")
         success_events = (
-            AssistantMessage(content=[AgentTextBlock(text="working")], model="claude-sonnet-5"),
+            AssistantMessage(content=[AgentTextBlock(text="working")], model="claude-sonnet-5-5"),
             ResultMessage(
                 subtype="success",
                 duration_ms=1,

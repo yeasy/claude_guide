@@ -156,7 +156,8 @@ class VolatileFactsTests(unittest.TestCase):
                 '"ttl": "1h"',
             ),
             "13_advanced/13.1_claude5_preview.md": (
-                "Sonnet 4.6 → Sonnet 5 迁移检查清单",
+                "Sonnet 4.6 / Sonnet 5 → Sonnet 5.5 迁移检查清单",
+                "between_tools",
                 "约增加 30% token",
                 '`stop_reason: "refusal"`',
                 "移除非默认 `temperature`、`top_p`、`top_k`",

@@ -8,7 +8,7 @@ from inspect import Parameter, signature
 from typing import Any
 
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"
 
 
 @dataclass(frozen=True)
