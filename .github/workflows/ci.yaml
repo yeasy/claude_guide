@@ -83,7 +83,7 @@ jobs:
           python3 tools/verify_artifacts.py --title "$title" --pdf dist/claude_guide.pdf --html dist/claude_guide.html --source-root . --checksums dist/SHA256SUMS
           (cd dist && sha256sum -c SHA256SUMS)
       - name: Upload verified publications
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: claude-guide-publications
           path: dist/
