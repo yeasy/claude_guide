@@ -162,7 +162,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "12_appendix/12.5_pricing.md",
-        (29,),
+        (30,),
         "Legacy price row is explicitly limited to migration, regression, and rollback.",
     ),
     **_sonnet_46_entries(
@@ -192,7 +192,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.1_claude5_preview.md",
-        (17, 59, 62, 64, 20, 76, 101),
+        (17, 59, 63, 65, 20, 77, 102),
         "Explicit Sonnet 5 migration checklist and legacy compatibility reference.",
     ),
     **_sonnet_46_entries(
