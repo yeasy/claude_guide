@@ -7,8 +7,8 @@
 #### 当前能力与兼容性基线
 
 **已确认能力方向**
-- Claude Opus 5.5、Claude Sonnet 5.5 和 Claude Fable 5.1 延续了 Anthropic 在长上下文、复杂推理和 Agent 工作流上的优势。
-- Claude Sonnet 5.5 是当前通用主力模型；Sonnet 4.6 与 Sonnet 5 仅作为既有系统迁移、回归对比和回退基线。Claude Opus 5.5（Opus 档当前型号，2026-09-22 发布；Opus 5 与 Opus 4.8/4.7/4.6 已转入 Legacy models）适合极度复杂的软件工程和推理任务，需要更高能力上限时再评估 Fable 5.1。
+- Claude Opus 5.5、Claude Sonnet 5.5 和 Claude Fable 5.2 延续了 Anthropic 在长上下文、复杂推理和 Agent 工作流上的优势。
+- Claude Sonnet 5.5 是当前通用主力模型；Sonnet 4.6 与 Sonnet 5 仅作为既有系统迁移、回归对比和回退基线。Claude Opus 5.5（Opus 档当前型号，2026-09-22 发布；Opus 5 与 Opus 4.8/4.7/4.6 已转入 Legacy models）适合极度复杂的软件工程和推理任务，需要更高能力上限时再评估 Fable 5.2。
 - Prompt Caching、Batch API、Claude Code、MCP 等能力共同强化了工程落地与成本控制路径。
 
 #### 三层+旗舰模型梯队
@@ -18,7 +18,7 @@
 | Claude Haiku 5.5 | 轻量快速 | $0.10/$0.50（提示超过 100K token 时 $0.50/$2.50） | 实时、大量 |
 | Claude Sonnet 5.5 | 通用主力 | $2.00/$10.00 | 通用、平衡；单价低于 Sonnet 4.6 |
 | Claude Opus 5.5 | Opus 档当前型号 | $4.00/$20.00 | 极高难度工程、深层推理 |
-| Claude Fable 5.1 | Fable 档当前型号（2026-09-01 发布） | $10.00/$50.00 | 分类器拒绝与回退需单独测试 |
+| Claude Fable 5.2 | Fable 档当前型号（2026-11-09 发布） | $8.00/$40.00 | 分类器拒绝与回退需单独测试 |
 | Claude Sonnet 4.6 | 迁移兼容与回退基线 | $3.00/$15.00 | 不用于新项目默认值 |
 
 #### Claude 5 的观察框架
@@ -174,7 +174,7 @@ RAG（检索增强生成）是上下文工程的实践工具：
 | Claude Sonnet 4.6（兼容性基线） | $3.00/M | $15.00/M | $3.75/M | $0.30/M |
 | Claude Opus 5.5 | $4.00/M | $20.00/M | $5.00/M | $0.20/M |
 
-> 注：Opus 5.5（2026-09-22 发布）为当前 Opus 线型号，缓存读取按基础输入的 5% 计（多数型号为 10%）；Opus 5 与 Opus 4.8/4.7/4.6 已转入官方 Legacy models 分组。Fable 5 已恢复全球访问，并于 2026-09-01 由 Fable 5.1 接替、转入 Legacy；Sonnet 5.5（2026-09-28 发布）是新项目默认评测起点，价格与 Sonnet 5 相同，$2/$10 已是标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
+> 注：Opus 5.5（2026-09-22 发布）为当前 Opus 线型号，缓存读取按基础输入的 5% 计（多数型号为 10%）；Opus 5 与 Opus 4.8/4.7/4.6 已转入官方 Legacy models 分组。Fable 5 已恢复全球访问，并于 2026-09-01 由 Fable 5.1 接替、转入 Legacy；Fable 5.1 又于 2026-11-09 由 Fable 5.2（$8/$40）接替；Sonnet 5.5（2026-09-28 发布）是新项目默认评测起点，价格与 Sonnet 5 相同，$2/$10 已是标准价。定价与缓存价格见上方表及[附录 E](../12_appendix/12.5_pricing.md)。
 
 ### 长对话管理成本对比
 

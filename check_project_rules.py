@@ -47,7 +47,7 @@ def _sonnet_46_entries(
 SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (156,),
+        (157,),
         "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
     ),
     **_sonnet_46_entries(
@@ -72,12 +72,12 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (75, 111, 113, 115, 123, 192),
+        (75, 112, 114, 116, 124, 193),
         "Historical model-family evolution and the 4.5-to-4.6 comparison.",
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (95, 170),
+        (95, 171),
         "Sonnet 5 migration target and legacy thinking compatibility reference.",
     ),
     **_sonnet_46_entries(
@@ -117,7 +117,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "03_tools/3.5_programmatic.md",
-        (25,),
+        (26,),
         "Model table marks Sonnet 5 as the target and 4.6 as legacy-only.",
     ),
     **_sonnet_46_entries(
@@ -162,7 +162,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "12_appendix/12.5_pricing.md",
-        (30,),
+        (31,),
         "Legacy price row is explicitly limited to migration, regression, and rollback.",
     ),
     **_sonnet_46_entries(
@@ -192,7 +192,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.1_claude5_preview.md",
-        (17, 59, 63, 65, 20, 77, 102),
+        (17, 60, 64, 66, 20, 80, 105),
         "Explicit Sonnet 5 migration checklist and legacy compatibility reference.",
     ),
     **_sonnet_46_entries(

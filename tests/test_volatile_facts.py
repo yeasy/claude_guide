@@ -74,6 +74,7 @@ class VolatileFactsTests(unittest.TestCase):
             "`claude-opus-5-5`",
             "`claude-sonnet-5-5`",
             "`claude-fable-5-1`",
+            "`claude-fable-5-2`",
             "thinking 默认开启",
             "Legacy models",
             "Fable 5 已于 2026-07-01 恢复全球访问",
