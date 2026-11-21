@@ -1,28 +1,28 @@
-## 本章小结：从 Chatbot 到 Agent
+## 本章小结
 
-Computer Use 是 AI 发展史上的一个分水岭。它标志着大模型不再满足于仅仅做一个“聊天机器人”，而是开始长出手脚，尝试成为现实世界的“操作者 (Agent)”。
+Computer Use 使大模型从“聊天机器人”走向能够直接操作软件的“操作者 (Agent)”。
 
 ### 核心知识点回顾
 
 #### 范式转移
 
-*   **API-First vs GUI-First**：API 是给机器看的，GUI 是给人看的。Computer Use 打破了这堵墙，让 AI 能像人一样通过 GUI 工作，解决了 99% 的软件没有 API 的集成难题。
+*   **API-First vs GUI-First**：API 是给机器用的，GUI 是给人用的。Computer Use 让 AI 能像人一样通过 GUI 工作，解决了 99% 的软件没有 API 带来的集成难题。
 *   **视觉弹性**：基于视觉的识别（“点击那个蓝色的登录按钮”）比固定选择器（`#login-btn-v2`）更能适应轻微 UI 变化，但仍需要截图校验、重试、日志和人工确认。
 
 #### 工作原理
 
 *   这是一个 **OODA 循环**：观察（截图）-> 判断（视觉模型）-> 决策(ReAct) -> 行动（鼠标/键盘）。
-*   **三大工具**：`computer`（操作键鼠）、`bash_20250124`（命令行）和 `text_editor_20250728` / `str_replace_based_edit_tool`（文本编辑）构成了 Claude 的工具腰带。
+*   **三大工具**：`computer`（操作键鼠）、`bash_20250124`（命令行）和 `text_editor_20250728` / `str_replace_based_edit_tool`（文本编辑）构成了 Claude 的基本工具集。
 
 #### 安全至上
 
-*   Computer Use 极其强大，也极其危险。
-*   **Docker 隔离** 是底线，绝对不可裸奔运行。
-*   **HITL（人机回环）** 是关键操作的保险丝。
+*   Computer Use 能力强，风险也高。
+*   **Docker 隔离** 是底线，绝不能在无隔离的主机上直接运行。
+*   **HITL（人机回环）** 是关键操作的最后防线。
 
 #### 最佳实践
 
-*   **混合架构**：不要为了用而用。能用 SQL 查库就别让 AI 去点数据库管理软件的 GUI。API + Computer Use = 最佳 ROI。
+*   **混合架构**：能用 SQL 查库，就不要让 AI 去点数据库管理软件的 GUI。API + Computer Use = 最佳 ROI。
 *   **提示工程**：在此模式下，Prompt 需要包含屏幕分辨率、视觉特征描述（Visual Grounding）等新要素。
 
 ### 开发者自检清单
@@ -32,12 +32,12 @@ Computer Use 是 AI 发展史上的一个分水岭。它标志着大模型不再
 - [ ] **成本意识**：我是否意识到每一步操作都伴随着高额的截图 Token 消耗？
 - [ ] **容错设计**：我的代码里是否包含了 `try-retry` 逻辑，以应对 UI 加载慢或点击失效的情况？
 
-### 下一站：职场进阶
+### 下一章
 
-掌握了 Computer Use，Claude 已经像一个刚入职的实习生，能看懂屏幕，也会点鼠标了。
-但要让它胜任高级岗位，还需要教它一些特定领域的“专业技能”，比如怎么写高质量的 Python 代码，或者怎么撰写符合 SEO 规范的文章。
+具备 Computer Use 后，Claude 像一个刚入职的实习生，能看懂屏幕、会点鼠标。
+要胜任更专业的岗位，还需要掌握特定领域的“专业技能”，比如编写高质量的 Python 代码，或撰写符合 SEO 规范的文章。
 
-下一章，将为 Claude 装备 **Skills**。
+下一章介绍为 Claude 提供这类技能的 **Skills**。
 
 ➡️ [第六章：Skills 技能系统](../06_skills/README.md)
 

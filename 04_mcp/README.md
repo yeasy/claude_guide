@@ -6,7 +6,7 @@ MCP（Model Context Protocol）是 Anthropic 推出的开放标准，让 Claude 
 
 ## 什么是 MCP？
 
-MCP 是大模型对其他资源或工具的统一访问接口标准，就像 AI 世界的 **USB-C**，让 Claude 能够：
+MCP 是大模型访问外部资源和工具的统一接口标准，相当于 AI 世界的 **USB-C**。借助 MCP，Claude 能够：
 
 - 访问本地文件系统
 - 连接数据库

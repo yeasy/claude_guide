@@ -22,16 +22,16 @@
 
 > *注：本书不会替代通用提示词工程、上下文工程、智能体理论或 Harness 工程专著；这些主题会在需要时交叉引用。本书聚焦 Claude 特有能力、接口边界、产品组合、迁移策略和上线判断。模型 ID、价格、上下文窗口和功能可用性变化很快，生产选型请以官方模型页、价格页和相关产品文档为准。*
 
-全书将系统性地介绍 Claude 的核心能力体系，包括：
+全书介绍 Claude 的核心能力体系，包括：
 
-- **[提示工程（Prompt Engineering）](02_prompt/README.md)**：与 Claude 高效沟通的艺术
+- **[提示工程（Prompt Engineering）](02_prompt/README.md)**：与 Claude 高效沟通的方法
 - **[工具使用（Tool Use）](03_tools/README.md)**：让 Claude 调用外部 API 和服务
 - **[模型上下文协议（MCP）](04_mcp/README.md)**：连接 Claude 与外部世界的标准接口
 - **[计算机操控（Computer Use）](05_computer_use/README.md)**：Claude 自主操作桌面环境
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-本书围绕新一代 Claude Fable 5 与 Opus、Sonnet、Haiku 各系列的核心能力展开。模型 ID、价格、上下文窗口和弃用状态变化很快，生产选型请以官方模型页和价格页为准。
+本书围绕新一代 Claude Fable 5 与 Opus、Sonnet、Haiku 各系列的核心能力展开；弃用状态同样以官方模型页为准。
 
 ### 可执行黄金路径
 
@@ -126,13 +126,13 @@ mdpress serve
 
 ## 五分钟体验路径
 
-5 分钟内先建立正确直觉，不把体验路径误当完整学习路径：
+以下路径用 5 分钟建立基本直觉，不能替代完整学习路径：
 
 1. **开始 Claude 对话（ch1）**：访问 [claude.ai](https://claude.ai) 或 API，与 Claude 进行第一轮对话，体验其推理与表达能力（2 分钟）
 2. **做一个 Claude 风格提示小练习（ch2.1-2.2）**：用清晰任务、上下文和 XML 标签约束输出，理解 Claude 与通用聊天机器人的差异（2 分钟）
 3. **理解工具调用入口（ch3.1）**：先看 Claude 如何从回答走向行动，再按需要进入 MCP、Skills 或 Claude Code 分支（1 分钟）
 
-完成这 3 步后，你会知道后续该按哪条路线深入；真正的生产级落地还需要继续学习工具、评估、成本、安全和部署章节。
+完成这 3 步后，即可确定后续的深入路线；生产级落地还需要继续学习工具、评估、成本、安全和部署章节。
 
 ## 学习路线图
 

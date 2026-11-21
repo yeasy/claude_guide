@@ -1,12 +1,12 @@
 # 第七章 Agentic Coding 与 Claude Code
 
-Claude 已成为开发者的强力编程助手。本章介绍如何充分利用 Claude 的编程能力。
+Claude 可以作为开发者的编程助手。本章介绍如何使用 Claude 的编程能力。
 
 ---
 
 ## Agentic Coding 是什么？
 
-Agentic Coding 指 Claude 作为自主编程代理，能够：
+Agentic Coding 是指 Claude 作为自主编程代理完成以下工作：
 
 - 理解代码库结构
 - 读写文件

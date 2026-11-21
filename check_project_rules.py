@@ -82,7 +82,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "10_optimization/10.2_caching.md",
-        (539,),
+        (534,),
         "Worked example still priced at the Sonnet 4.6 cache-read rate; the line names the Sonnet 5 rate alongside it.",
     ),
     **_sonnet_46_entries(
@@ -147,7 +147,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "10_optimization/10.2_caching.md",
-        (251,),
+        (246,),
         "Legacy model retained only as a cache-threshold compatibility baseline.",
     ),
     **_sonnet_46_entries(

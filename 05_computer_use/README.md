@@ -1,10 +1,10 @@
 # 第五章 Computer Use 计算机操控
 
-Computer Use 是 Claude 最具突破性的能力，让 AI 能够像人类一样操作计算机界面。
+Computer Use 是 Claude 最具突破性的能力之一，让 AI 能够像人一样操作计算机界面。
 
 ---
 
-## 革命性意义
+## Computer Use 能做什么
 
 传统 AI 只能处理文本和数据。Computer Use 让 Claude 能够：
 
