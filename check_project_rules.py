@@ -72,7 +72,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (75, 112, 114, 116, 124, 193),
+        (75, 112, 114, 116, 124, 194),
         "Historical model-family evolution and the 4.5-to-4.6 comparison.",
     ),
     **_sonnet_46_entries(
@@ -117,7 +117,7 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "03_tools/3.5_programmatic.md",
-        (26,),
+        (27,),
         "Model table marks Sonnet 5 as the target and 4.6 as legacy-only.",
     ),
     **_sonnet_46_entries(
@@ -197,12 +197,12 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     ),
     **_sonnet_46_entries(
         "13_advanced/13.2_infinite_chats.md",
-        (955,),
+        (956,),
         "Legacy model retained only as a context-window compatibility baseline.",
     ),
     **_sonnet_46_entries(
         "13_advanced/summary.md",
-        (11, 22, 166, 174),
+        (11, 22, 167, 175),
         "Summary explicitly limits 4.6 to migration, compatibility, and rollback.",
     ),
 }

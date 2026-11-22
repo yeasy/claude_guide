@@ -19,14 +19,14 @@
 
 #### 多 Agent 协作
 
-*   **Multi-Agent Systems**: 分工专业化。与其用一个超级 Prompt 做所有事，不如用三个简单的 Prompt 分别充当 Researcher, Coder, Reviewer。
-*   **Orchestration**: 无论是层级式（Leader-Follower）还是接力棒式（Handoff），关键在于清晰的 **状态共享** 和 **边界定义**。
+*   **Multi-Agent Systems**: 分工专业化。与其用一个超级 Prompt 做所有事，不如用三个简单的 Prompt 分别充当 Coder, Reviewer, Writer。
+*   **Orchestration**: 无论是层级式（Hierarchical）还是接力棒式（Handoff），关键在于清晰的 **状态共享** 和 **边界定义**。
 
 ### 开发者自检清单
 
 - [ ] **模式选择**：我面对的任务是探索性的（用 ReAct）还是路径清晰的（用 Plan-and-Solve）？
 - [ ] **记忆设计**：我的 Agent 真的需要记住三天前的事情吗？如果需要，我是否配置了向量数据库？
-- [ ] **防死循环**：我是否设置了最大迭代次数 (e.g. `max_loops=15`)？
+- [ ] **防死循环**：我是否设置了最大迭代次数（例如来回超过 10 轮即强制终止）？
 - [ ] **成本监控**：在开启 Extended Thinking 或 Multi-Agent 时，我是否计算过单次任务的 Token 成本？
 
 ### 下一章

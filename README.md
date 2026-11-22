@@ -31,7 +31,7 @@
 - **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
 - **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
 
-本书围绕新一代 Claude Fable 5 与 Opus、Sonnet、Haiku 各系列的核心能力展开；弃用状态同样以官方模型页为准。
+本书围绕 Claude Fable、Opus、Sonnet、Haiku 各系列的核心能力展开；弃用状态同样以官方模型页为准。
 
 ### 可执行黄金路径
 

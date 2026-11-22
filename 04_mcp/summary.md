@@ -26,7 +26,7 @@ MCP (Model Context Protocol) 使 AI 应用开发走向标准化：连接数据�
 
 #### 自定义开发
 
-*   **FastMCP (Python)**：基于装饰器，开发快，适合快速验证。
+*   **MCPServer（Python，1.x 名为 FastMCP）**：基于装饰器，开发快，适合快速验证。
 *   **TypeScript SDK**：类型安全，适合构建复杂的生产级 Server。
 *   **设计原则**：工具原子化、描述清晰、错误处理得当。
 

@@ -36,7 +36,7 @@ Claude 的 Computer Use 能力是迈向这一形态的第一步。
 
 如果工作内容只是“写 boilerplate 代码”或“搬运数据”，这种担心有其道理；如果工作是 **定义问题、设计架构、通过同理心理解用户**，AI 则会放大你的能力。
 
-在这本书的很多案例中（如 [9.1 客服](09_practical/9.1_customer_service.md)、[11.1 宪法式 AI](11_safety/11.1_cai.md)），都强调了 **Human-in-the-Loop**：AI 的价值在于与人协作，而不在于取代人，即 **Human + AI > Super Human**。
+在这本书的很多案例中（如 [9.1 客服](09_practical/9.1_customer_service.md)、[11.2 构建安全护栏](11_safety/11.2_guardrail.md)），都强调了 **Human-in-the-Loop**：AI 的价值在于与人协作，而不在于取代人，即 **Human + AI > Super Human**。
 
 ## 愿景
 

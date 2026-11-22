@@ -6,7 +6,7 @@
 
 #### 概念定义
 
-*   **Skills = System Prompt + Tools + Knowledge**。
+*   **Skills = 指令 + 脚本 + 资源**。
 *   它是一个包含完整上下文和可执行能力的 **软件包**，不同于简单的 Prompt。
 *   核心理念是 **On-Demand Loading（按需加载）**：只在需要时才注入上下文，节省 Token 并减少干扰。
 
@@ -20,7 +20,7 @@
 
 #### 多层级应用
 
-*   **Built-in Skills**：开箱即用，覆盖文档分析、数据清洗、可视化等通用需求。
+*   **Built-in Skills**：开箱即用，覆盖 Excel、PowerPoint、Word、PDF 等文档的生成与处理。
 *   **Custom Skills**：企业自定义，覆盖内部合规、私有代码框架、特殊业务流程。
 
 #### 组合与编排
