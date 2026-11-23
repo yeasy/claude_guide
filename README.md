@@ -1,20 +1,12 @@
-<div align="center">
-
 # Claude 技术指南
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![GitHub stars](https://img.shields.io/github/stars/yeasy/claude_guide?style=social)](https://github.com/yeasy/claude_guide)
-[![Release](https://img.shields.io/github/release/yeasy/claude_guide.svg)](https://github.com/yeasy/claude_guide/releases)
-[![Online Reading](https://img.shields.io/badge/在线阅读-GitBook-brightgreen)](https://yeasy.gitbook.io/claude_guide)
-[![PDF](https://img.shields.io/badge/PDF-下载-orange)](https://github.com/yeasy/claude_guide/releases/latest)
+从日常对话和提示词入手，掌握 Claude API、Claude Code 与智能体应用开发。
 
-> **从零开始，系统掌握 Anthropic Claude 的核心能力与最佳实践**
+**[在 GitBook 阅读第一章 · 认识 Claude](https://yeasy.gitbook.io/claude_guide/di-yi-bu-fen-ji-chu-pian/01_intro)**
 
-<img src="_images/claude_tech_guide_cover.png" width="300" alt="Claude 技术指南封面">
+[全书目录（GitHub）](https://github.com/yeasy/claude_guide/blob/main/SUMMARY.md) · [正式 PDF（发布页）](https://github.com/yeasy/claude_guide/releases/latest)
 
-</div>
-
----
+<img src="_images/claude_tech_guide_cover.png" width="210" alt="Claude 技术指南封面">
 
 ## 关于本书
 
@@ -22,26 +14,40 @@
 
 > *注：本书不会替代通用提示词工程、上下文工程、智能体理论或 Harness 工程专著；这些主题会在需要时交叉引用。本书聚焦 Claude 特有能力、接口边界、产品组合、迁移策略和上线判断。模型 ID、价格、上下文窗口和功能可用性变化很快，生产选型请以官方模型页、价格页和相关产品文档为准。*
 
-全书介绍 Claude 的核心能力体系，包括：
-
-- **[提示工程（Prompt Engineering）](02_prompt/README.md)**：与 Claude 高效沟通的方法
-- **[工具使用（Tool Use）](03_tools/README.md)**：让 Claude 调用外部 API 和服务
-- **[模型上下文协议（MCP）](04_mcp/README.md)**：连接 Claude 与外部世界的标准接口
-- **[计算机操控（Computer Use）](05_computer_use/README.md)**：Claude 自主操作桌面环境
-- **[Skills 系统](06_skills/README.md)**：可复用的定制化工作流
-- **[代码执行与 Agentic Coding](07_coding/README.md)**：Claude 作为自主编程助手
-
 本书围绕 Claude Fable、Opus、Sonnet、Haiku 各系列的核心能力展开；弃用状态同样以官方模型页为准。
 
-### 可执行黄金路径
+## 从哪里开始
 
-仓库提供三条可离线测试、真实运行时再读取凭据的最小路径：
+- **日常使用** · 先在 [claude.ai](https://claude.ai) 试一次对话，再用[提示词基础](https://yeasy.gitbook.io/claude_guide/di-yi-bu-fen-ji-chu-pian/02_prompt/2.1_basics)和 [XML 标签示例](https://yeasy.gitbook.io/claude_guide/di-yi-bu-fen-ji-chu-pian/02_prompt/2.2_xml)改写同一个任务，对比两次回答。
+- **接入 Claude API** · 先用 [API 参考手册](https://yeasy.gitbook.io/claude_guide/fu-lu/12_appendix/12.1_api_ref)发出第一条消息，再读[工具调用与结果反馈](https://yeasy.gitbook.io/claude_guide/di-er-bu-fen-gong-ju-pian/03_tools/3.3_results)，了解应用如何执行工具并把结果交回模型。
+- **用 Claude Code 开发** · 从 [Claude Code CLI 入门](https://yeasy.gitbook.io/claude_guide/di-san-bu-fen-jin-jie-pian/07_coding/7.2_cli)开始，在熟悉的项目中练习读代码、审阅改动和设置权限。需要程序化集成时，继续读 [Agent SDK 集成](https://yeasy.gitbook.io/claude_guide/di-san-bu-fen-jin-jie-pian/07_coding/7.3_sdk)。
 
-- [Messages API 最小调用](examples/messages_api.py)
-- [完整客户端工具循环](examples/tool_use_loop.py)
-- [Agent SDK 成功/失败事件处理](examples/agent_sdk_minimal.py)
+<details>
 
-依赖版本锁定在 [`examples/requirements.txt`](examples/requirements.txt)。测试不读取 API key、不访问网络：
+<summary>按角色选读与前置知识</summary>
+
+第一次使用 Claude 时，可用五分钟体验对话（2 分钟）、提示词改写（2 分钟）和[工具调用原理](https://yeasy.gitbook.io/claude_guide/di-er-bu-fen-gong-ju-pian/03_tools/3.1_overview)（1 分钟）。普通用户可继续读第 1–3 章，了解模型选择、日常对话与工具使用。
+
+- **AI 应用开发者与自动化工程师** · 先读第 1–2 章，再结合附录 A 的 API 手册练习第 3–8 章，最后用第 9–11 章和附录 G 核对案例、成本及安全要求。
+- **产品负责人、业务人员与企业架构师** · 从第 1 章了解能力边界，选读第 8–11 章规划应用，再查第 13 章及附录 A、F、G，核对方案所用的接口和能力。
+- **提示词工程师** · 读第 1–2 章与第 3.1–3.3 节，再结合第 4–6 章的示例练习提示词结构、工具调用与多模态任务设计。
+- **AI 研究爱好者** · 从第 1 章了解模型演进，再读[模型内部可解释性](https://yeasy.gitbook.io/claude_guide/di-wu-bu-fen-jin-jie-neng-li/13_advanced/13.4_model_interpretability)。
+
+日常使用需要基础计算机操作经验和 Claude 访问权限，了解大语言模型的基本概念会有帮助。做 API 练习前应了解 Python 或 JavaScript、HTTP 和 JSON。练习 MCP 与 Computer Use 需要熟悉命令行、包管理和 Docker 等容器工具。练习 Claude Code 需要熟悉 Git、终端和项目权限边界。
+
+</details>
+
+<details>
+
+<summary>可执行示例与离线测试</summary>
+
+仓库提供三条可离线测试、真实运行时再读取凭据的最小路径。
+
+- [Messages API 最小调用](https://github.com/yeasy/claude_guide/blob/main/examples/messages_api.py)
+- [完整客户端工具循环](https://github.com/yeasy/claude_guide/blob/main/examples/tool_use_loop.py)
+- [Agent SDK 成功/失败事件处理](https://github.com/yeasy/claude_guide/blob/main/examples/agent_sdk_minimal.py)
+
+安装 [`examples/requirements.txt`](https://github.com/yeasy/claude_guide/blob/main/examples/requirements.txt) 锁定的依赖后，测试可在离线环境运行，无需 API key。
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
@@ -49,141 +55,55 @@ python3 -m pip install -r examples/requirements.txt
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-真实运行 `messages_api.py` 前按 Anthropic SDK 文档配置 `ANTHROPIC_API_KEY`；Agent SDK 示例使用该 SDK 支持的 Claude Code / API 凭据机制。不要把凭据写入仓库。
+真实运行 `messages_api.py` 前按 Anthropic SDK 文档配置 `ANTHROPIC_API_KEY`。Agent SDK 示例使用该 SDK 支持的 Claude Code 或 API 凭据机制。不要把凭据写入仓库。
 
----
+</details>
 
-## 目标读者
+## 全书结构
 
-| 读者类型 | 你将获得什么 |
-|---------|-------------|
-| **AI 应用开发者** | 掌握 Claude API 的高级用法，构建生产级 AI 应用 |
-| **产品经理 / 业务人员** | 理解 Claude 能力边界，规划 AI 产品路线图 |
-| **自动化工程师** | 利用 Claude 构建端到端工作流自动化 |
-| **AI 研究爱好者** | 深入理解大语言模型的能力演进与设计原理 |
-| **Claude 用户** | 提升日常使用效率，解锁高级功能 |
+- **基础篇（第 1–2 章）** · [Claude 概览与模型选择](https://yeasy.gitbook.io/claude_guide/di-yi-bu-fen-ji-chu-pian/01_intro)、[提示工程](https://yeasy.gitbook.io/claude_guide/di-yi-bu-fen-ji-chu-pian/02_prompt)。
+- **工具篇（第 3–5 章）** · [工具调用](https://yeasy.gitbook.io/claude_guide/di-er-bu-fen-gong-ju-pian/03_tools)、[MCP](https://yeasy.gitbook.io/claude_guide/di-er-bu-fen-gong-ju-pian/04_mcp) 和 [Computer Use](https://yeasy.gitbook.io/claude_guide/di-er-bu-fen-gong-ju-pian/05_computer_use)。
+- **进阶篇（第 6–8 章）** · [Skills](https://yeasy.gitbook.io/claude_guide/di-san-bu-fen-jin-jie-pian/06_skills)、[Claude Code](https://yeasy.gitbook.io/claude_guide/di-san-bu-fen-jin-jie-pian/07_coding) 与 [Agent 架构设计](https://yeasy.gitbook.io/claude_guide/di-san-bu-fen-jin-jie-pian/08_agent)。
+- **实战篇（第 9–11 章）** · [企业应用案例](https://yeasy.gitbook.io/claude_guide/di-si-bu-fen-shi-zhan-pian/09_practical)、[成本与性能](https://yeasy.gitbook.io/claude_guide/di-si-bu-fen-shi-zhan-pian/10_optimization)、[安全与伦理](https://yeasy.gitbook.io/claude_guide/di-si-bu-fen-shi-zhan-pian/11_safety)。
+- **进阶能力（第 13 章）** · [Claude 前沿特性、上下文工程与模型可解释性](https://yeasy.gitbook.io/claude_guide/di-wu-bu-fen-jin-jie-neng-li/13_advanced)。
+- **[附录](https://yeasy.gitbook.io/claude_guide/fu-lu/12_appendix)** · API、常见问题、术语、资源、定价与竞品对比，以及[快变事实核验表](https://yeasy.gitbook.io/claude_guide/fu-lu/12_appendix/12.7_volatile_facts)。
 
-**前置知识要求**：基础计算机操作经验；对大语言模型有初步了解（非必需）；能够访问 Claude（[claude.ai](https://claude.ai) 或 [API](https://claude.com/platform/api)）。如果要动手完成 API、MCP、Computer Use 或 Claude Code 章节，还需要按路线准备对应基础：API 开发者需要 Python/JavaScript 与 HTTP/JSON 经验；MCP/Computer Use 构建者需要本地命令行、包管理和 Docker/容器基础；Claude Code 用户需要熟悉 Git、终端和项目权限边界。
+## 延伸阅读
 
----
+- [大模型提示词工程指南](https://yeasy.gitbook.io/prompt_engineering_guide/) · 学习通用提示词原理与实践。
+- [大模型上下文工程权威指南](https://yeasy.gitbook.io/context_engineering_guide/) · 从提示词设计扩展到生产环境中的上下文管理。
+- [智能体 Harness 工程指南](https://yeasy.gitbook.io/harness_engineering_guide/) · 理解 Claude Code 等智能体的运行基础设施。
 
-## 内容大纲
+<details>
 
-```text
-第一部分：基础篇
-├── Claude 概览与模型选择
-└── 提示工程核心技术
+<summary>更多系列图书</summary>
 
-第二部分：工具篇
-├── Tool Use 工具调用
-├── MCP 模型上下文协议
-└── Computer Use 计算机操控
+- [零基础学 AI](https://yeasy.gitbook.io/ai_beginner_guide/) · 从基础概念入门。
+- [智能体 AI 权威指南](https://yeasy.gitbook.io/agentic_ai_guide/) · 深入智能体架构、多智能体协作与 AgentOps。
+- [大模型安全权威指南](https://yeasy.gitbook.io/ai_security_guide/) · 学习大模型安全攻防与治理。
+- [OpenClaw 从入门到精通](https://yeasy.gitbook.io/openclaw_guide/) · 学习开源智能体框架的使用与原理。
+- [大模型原理与架构](https://yeasy.gitbook.io/llm_internals/) · 理解大语言模型的底层原理与架构。
 
-第三部分：进阶篇
-├── Skills 技能系统
-├── Agentic Coding 与 Claude Code
-└── Agent 架构设计
+</details>
 
-第四部分：实战篇
-├── 企业级应用案例
-├── 成本优化与性能调优
-└── 安全与伦理考量
+## 贡献与反馈
 
-第五部分：进阶能力
-├── Claude 前沿特性
-├── 上下文工程
-└── 模型内部可解释性
+欢迎在 [GitHub Issues](https://github.com/yeasy/claude_guide/issues) 报告勘误或失效链接，也可以[提交 Pull Request](https://github.com/yeasy/claude_guide/pulls)修订内容或补充案例。
 
-附录
-├── API、FAQ、术语与资源
-└── 定价、竞品对比与快变事实核验
-```
+<details>
 
-> [点击从第一章开始阅读](01_intro/README.md)
+<summary>本地开发与预览</summary>
 
----
-
-## 阅读方式
-
-**在线阅读**：[GitBook 在线版](https://yeasy.gitbook.io/claude_guide/)
-
-## 下载离线版本
-
-本书提供 PDF 版本供离线阅读，可前往 [GitHub Releases](https://github.com/yeasy/claude_guide/releases/latest) 页面下载最新版本。
-
-如需获取默认分支自动更新的预览版，可直接下载 [claude_guide.pdf](https://github.com/yeasy/claude_guide/releases/download/preview-pdf/claude_guide.pdf)。该文件会随主线更新覆盖，不代表正式发布版本。
-
-**本地阅读**（先安装 [mdPress](https://github.com/yeasy/mdpress)）：
+安装 [mdPress](https://github.com/yeasy/mdpress) 后，在仓库根目录启动本地预览，再打开 `http://localhost:9000`。
 
 ```bash
 brew tap yeasy/tap && brew install mdpress
 mdpress serve
 ```
 
-启动本地服务器后，访问 [本地阅读地址](http://localhost:9000)
+[默认分支 PDF 预览版](https://github.com/yeasy/claude_guide/releases/download/preview-pdf/claude_guide.pdf)随主线更新，正式版本以发布页为准。
 
----
-
-## 五分钟体验路径
-
-以下路径用 5 分钟建立基本直觉，不能替代完整学习路径：
-
-1. **开始 Claude 对话（ch1）**：访问 [claude.ai](https://claude.ai) 或 API，与 Claude 进行第一轮对话，体验其推理与表达能力（2 分钟）
-2. **做一个 Claude 风格提示小练习（ch2.1-2.2）**：用清晰任务、上下文和 XML 标签约束输出，理解 Claude 与通用聊天机器人的差异（2 分钟）
-3. **理解工具调用入口（ch3.1）**：先看 Claude 如何从回答走向行动，再按需要进入 MCP、Skills 或 Claude Code 分支（1 分钟）
-
-完成这 3 步后，即可确定后续的深入路线；生产级落地还需要继续学习工具、评估、成本、安全和部署章节。
-
-## 学习路线图
-
-```mermaid
-graph LR
-    A["<b>Claude 入门区</b><br/>第1-3章<br/>对话与核心能力"] -->|日常使用| B["<b>普通用户</b><br/>第1-3章<br/>高效对话与工具使用"]
-    A -->|全栈开发| C["<b>开发者</b><br/>第1,3-7章<br/>API、工具、Agentic Coding"]
-    A -->|企业架构| D["<b>企业架构师</b><br/>第1,8-11,13章与附录<br/>系统设计与优化"]
-    A -->|优化提示| E["<b>提示词工程师</b><br/>第1-2,4-6章<br/>提示词技巧与优化"]
-    B -->|增强能力| C
-    C -->|系统规划| D
-    D -->|精细调优| E
-
-    style A fill:#e0f2f1
-    style B fill:#b2dfdb
-    style C fill:#80cbc4
-    style D fill:#4db6ac
-    style E fill:#26a69a
-```
-
-### 学习角色对比
-
-| 角色 | 推荐章节 | 学习重点 | 预期成果 |
-|------|---------|---------|---------|
-| **普通用户** | 第 1-3 章 | Claude 核心能力、对话技巧、日常工具使用 | 高效使用 Claude 完成日常任务 |
-| **开发者** | 第 1-2→3-8→9-11→附录 A/G | API 集成、Tool Use、MCP、Agentic Coding、成本与安全 | 构建 Claude 驱动的生产级应用 |
-| **企业架构师** | 第 1→8-11→13 章，附录 A/F/G | 系统设计、成本优化、安全部署、快变事实核验 | 规划企业级 Claude 应用方案 |
-| **提示词工程师** | 第 1-2→3.1-3.3→4-6 章 | 提示词结构、工具心智模型、多模态设计、优化方法 | 设计高质量的提示词系统 |
-
----
-
-## 推荐阅读
-
-本书是 AI 技术丛书的一部分。以下书籍与本书形成互补：
-
-| 书名 | 与本书的关系 |
-|------|------------|
-| [《零基础学 AI》](https://yeasy.gitbook.io/ai_beginner_guide) | AI 零基础入门，适合作为本书的前置阅读 |
-| [《大模型提示词工程指南》](https://yeasy.gitbook.io/prompt_engineering_guide) | 深入提示词工程的通用原理与最佳实践 |
-| [《大模型上下文工程权威指南》](https://yeasy.gitbook.io/context_engineering_guide) | 系统掌握上下文工程，从提示词到生产级 AI 系统 |
-| [《智能体 AI 权威指南》](https://yeasy.gitbook.io/agentic_ai_guide) | 全面掌握智能体架构、多智能体协作与 AgentOps |
-| [《大模型安全权威指南》](https://yeasy.gitbook.io/ai_security_guide) | LLM 安全攻防与治理 |
-| [《OpenClaw 从入门到精通》](https://yeasy.gitbook.io/openclaw_guide) | 开源自驱型智能体框架的使用与原理 |
-| [《大模型原理与架构》](https://yeasy.gitbook.io/llm_internals) | 深入理解大语言模型底层逻辑与架构 |
-| [《智能体 Harness 工程指南》](https://yeasy.gitbook.io/harness_engineering_guide) | 深入 Claude Code 等智能体系统的 Harness 工程基础设施 |
-
----
-
-## 贡献与反馈
-
-欢迎提交 [Issue](https://github.com/yeasy/claude_guide/issues) 或 [PR](https://github.com/yeasy/claude_guide/pulls)，尤其欢迎：错别字修正、失效链接修复、实践案例补充。
+</details>
 
 ## 许可证
 
