@@ -146,9 +146,23 @@ class WorkflowSafetyTests(unittest.TestCase):
     def test_mermaid_lock_is_exact(self):
         package = json.loads((ROOT / "tools/mermaid/package.json").read_text())
         lock = json.loads((ROOT / "tools/mermaid/package-lock.json").read_text())
-        pinned = package["dependencies"]["@mermaid-js/mermaid-cli"]
-        self.assertRegex(pinned, r"^\d+\.\d+\.\d+$", "mermaid-cli must be pinned to an exact version")
-        self.assertEqual(lock["packages"][""]["dependencies"]["@mermaid-js/mermaid-cli"], pinned)
+        dependency = "@mermaid-js/mermaid-cli"
+        pinned = package["dependencies"][dependency]
+        self.assertIsNotNone(
+            re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", pinned),
+            "mermaid-cli must be pinned to an exact version",
+        )
+        self.assertGreaterEqual(lock["lockfileVersion"], 3)
+        self.assertEqual(
+            lock["packages"][""]["dependencies"][dependency],
+            pinned,
+            "lockfile root dependency must match package.json",
+        )
+        self.assertEqual(
+            lock["packages"][f"node_modules/{dependency}"]["version"],
+            pinned,
+            "resolved mermaid-cli version must match package.json",
+        )
 
     def run_preview(self, scenario: str, *, repo: str = REPOSITORY, sha: str = SHA):
         text = self.text("preview-pdf.yml")
