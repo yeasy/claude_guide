@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import importlib.util
+import re
 import sys
 import unittest
 from importlib.metadata import version
@@ -173,13 +174,24 @@ class GoldenPathTests(unittest.TestCase):
             asyncio.run(module.run_agent("task", event_source=failing_events))
 
     def test_dependencies_are_exact_and_chapters_link_all_examples(self):
-        requirements = (EXAMPLES / "requirements.txt").read_text(encoding="utf-8")
-        self.assertEqual(
-            requirements.splitlines(),
-            ["anthropic==0.116.0", "claude-agent-sdk==0.2.115"],
-        )
-        self.assertEqual(version("anthropic"), "0.116.0")
-        self.assertEqual(version("claude-agent-sdk"), "0.2.115")
+        requirements = (EXAMPLES / "requirements.txt").read_text(encoding="utf-8").splitlines()
+        expected_packages = ("anthropic", "claude-agent-sdk")
+        self.assertEqual(len(requirements), len(expected_packages))
+        for package, requirement in zip(expected_packages, requirements):
+            with self.subTest(package=package):
+                name, separator, pinned = requirement.partition("==")
+                self.assertEqual((name, separator), (package, "=="))
+                self.assertIsNotNone(
+                    re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", pinned),
+                    "requirements must pin an exact stable version",
+                )
+                if package == "claude-agent-sdk":
+                    self.assertGreaterEqual(
+                        tuple(map(int, pinned.split("."))),
+                        (0, 2, 121),
+                        "claude-agent-sdk must include the fix for GHSA-h4mw-j7qp-8mwm",
+                    )
+                self.assertEqual(version(package), pinned, "installed version must match requirements.txt")
         routes = {
             "12_appendix/12.1_api_ref.md": ("messages_api.py",),
             "03_tools/3.3_results.md": ("tool_use_loop.py",),
