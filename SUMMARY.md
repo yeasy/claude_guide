@@ -9,6 +9,7 @@
   * [1.2 Claude 模型家族全景](01_intro/1.2_model_family.md)
   * [1.3 Claude 能做什么：六大核心能力](01_intro/1.3_capabilities.md)
   * [1.4 如何选择合适的模型：决策框架](01_intro/1.4_model_selection.md)
+  * [1.5 五分钟快速上手：API 与 Claude Code CLI](01_intro/1.5_quickstart.md)
   * [本章小结](01_intro/summary.md)
 
 * [第二章 提示工程核心技术](02_prompt/README.md)
@@ -125,5 +126,6 @@
   * [附录 E：Claude 定价与成本参考](12_appendix/12.5_pricing.md)
   * [附录 F：Claude 与竞品对比——全面的选择指南](12_appendix/12.6_model_comparison.md)
   * [附录 G：快变事实核验表](12_appendix/12.7_volatile_facts.md)
+  * [附录 H：Claude 版本演进与迁移历史](12_appendix/12.8_version_migration.md)
 
 * [结语：从工具到伙伴](EPILOGUE.md)

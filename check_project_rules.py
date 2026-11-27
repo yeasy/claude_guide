@@ -47,8 +47,8 @@ def _sonnet_46_entries(
 SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
     **_sonnet_46_entries(
         "01_intro/1.2_model_family.md",
-        (157,),
-        "Sonnet 5 unit price stated against the 4.6 baseline it replaces.",
+        (76,),
+        "Sonnet 5.5 unit price stated against the 4.6 baseline it replaces.",
     ),
     **_sonnet_46_entries(
         "01_intro/1.4_model_selection.md",
@@ -71,13 +71,13 @@ SONNET_46_ALLOWLIST: dict[tuple[str, int], str] = {
         "Historical release timeline entry for the February 2026 launch.",
     ),
     **_sonnet_46_entries(
-        "01_intro/1.2_model_family.md",
-        (75, 112, 114, 116, 124, 194),
+        "12_appendix/12.8_version_migration.md",
+        (25, 54, 58),
         "Historical model-family evolution and the 4.5-to-4.6 comparison.",
     ),
     **_sonnet_46_entries(
-        "01_intro/1.2_model_family.md",
-        (95, 171),
+        "12_appendix/12.8_version_migration.md",
+        (33, 50),
         "Sonnet 5 migration target and legacy thinking compatibility reference.",
     ),
     **_sonnet_46_entries(
