@@ -28,7 +28,7 @@ Claude 是一个 **模型家族**。从 2023 年首次发布到 2026 年，Claud
 | 章节 | 主题 | 你将学到 |
 |------|------|---------|
 | [1.1](1.1_born.md) | Anthropic 与 Claude 的诞生 | 公司背景、核心理念、为什么选择 Claude |
-| [1.2](1.2_model_family.md) | Claude 模型家族全景 | 各代模型特点、命名规则、发布时间线 |
+| [1.2](1.2_model_family.md) | Claude 模型家族全景 | 各代模型特点、命名规则、[完整发布时间线（附录 H）](../12_appendix/12.8_version_migration.md) |
 | [1.3](1.3_capabilities.md) | 能力矩阵：Claude 能做什么 | 六大核心能力领域详解 |
 | [1.4](1.4_model_selection.md) | 如何选择合适的模型 | 不同场景的模型选型指南 |
 | [1.5](1.5_quickstart.md) | 五分钟快速上手：API 与 Claude Code CLI | 完成首轮 Web、API 与 CLI 调通闭环 |
